@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>生鲜蔬菜详细信息-生鲜网</title>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/index.css" media="all" />
+		<link rel="stylesheet" href="css/plulic.css" media="all" >
+		<link rel="stylesheet" href="css/search.css" media="all" >
+		<link href='img/index/logo.png' rel='icon' type='image/x-icon'/>
+	</head>
+	<body class="vegetableInfo">
+		<nav>
+				<ul class="layui-nav layui-row">
+					<!--<li class="layui-nav-item">
+				    	<a href="">控制台<span class="layui-badge">9</span></a>
+				  	</li>-->
+				  	<li class="layui-nav-item layui-col-xs2 layui-col-sm2 layui-col-md1">
+				    	<a href="">请登录</a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs1 layui-col-sm1 layui-col-md1">
+				    	<a href="">注册</a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs3 layui-col-sm1 layui-col-md4" style="display: none;">
+				    	<a href="">个人中心<span class="layui-badge-dot"></span></a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs2 layui-col-sm1 layui-col-md1" style="display: none;">
+				    	<a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+				    	<dl class="layui-nav-child">
+				      		<dd><a href="javascript:;">我的信息</a></dd>
+				      		<dd><a href="javascript:;">修改信息</a></dd>
+				      		<dd><a href="javascript:;">退出</a></dd>
+				    	</dl>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs3 layui-col-sm3 layui-col-md1" style="margin-right: 0px;" >
+				    	<a href=""><img src="img/index/icon-shop-cart.png" class="layui-nav-img" >购物车<span class="layui-badge" >119</span></a>
+				    </li>
+				    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1" >
+				    	<a href=""><img src="img/index/icon-order.png" class="layui-nav-img">我的订单</a>
+				  	</li>
+				    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1">
+				    	<a href=""><img src="img/index/icon-fen.png" class="layui-nav-img">网站导航</a>
+				    	<dl class="layui-nav-child" style="text-indent: 10px;">
+				      		<dd><a href="javascript:;">蔬菜类</a></dd>
+				      		<dd><a href="javascript:;">水果类</a></dd>
+				      		<dd><a href="javascript:;">副食类</a></dd>
+				      		<dd><a href="javascript:;">肉类</a></dd>
+				      		<dd><a href="javascript:;">调料类</a></dd>
+				    	</dl>
+				    </li>
+				</ul>
+			</nav>
+		<section>
+			<div id="header" class="layui-row" data-spm="a2226n0">
+    			<div class="headerLayout layui-col-md12">
+        			<!--<div class="headerCon">-->
+            			<!--<h1 id="mallLogo">
+                			<span class="mlogo">
+                				<a href="" title="shengxian.com"><s></s>shengxian.com</a>
+                			</span>
+                		</h1>-->
+             			<div class="j_logo logo-con" data-spm="2015002">
+							<img class="sxian-logo-img" src="img/index/logo.png" style="margin: 1px auto;display:block" data-spm-anchor-id="875.7931836/B.2015002.i0.4dc149926MkTg4" width="240px" height="130px">
+						</div>
+            			<div class="header-extra">
+                			<div class="header-banner">
+                        		<div>
+                    			</div>
+                			</div>
+               			</div>
+             			<div id="mallSearch" class="mall-search">
+	        				<form name="searchTop" action="" class="mallSearch-form clearfix" target="_top" acceptcharset="gbk" accept-charset="gbk">
+		            			<fieldset>
+			                		<legend>生鲜搜索</legend>
+			                      	<div class="mallSearch-input clearfix">
+			                        	<label for="mq" style="visibility: visible; display: none;">搜索</label>
+		                          		<div class="s-combobox" id="s-combobox-138">
+		                              		<div class="s-combobox-input-wrap">
+		                                    	<input name="q" accesskey="s" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate" value="" id="mq" class="s-combobox-input" role="combobox" aria-haspopup="true" title="请输入搜索文字" aria-label="请输入搜索文字" type="text">
+		                              		</div>
+		                          			<label for="mq" class="s-combobox-placeholder" style="color: rgb(102, 102, 102); visibility: visible;">搜索 </label>
+		                          		</div>
+			                          	<button type="submit">搜索<s></s></button>
+			                          	<input id="J_Type" name="type" value="p" type="hidden">
+			                          	<input id="J_MallSearchStyle" name="style" value="" type="hidden">
+			                          	<input id="J_Cat" name="cat" value="all" type="hidden">
+			                          	<input name="vmarket" value="" type="hidden">
+			                      	</div>
+		             			</fieldset>
+	         				</form>
+		    				<ul data-spm="a1z5h" class="hot-query">
+		    					<li class="hot-query-highlight">
+		    						<a href="#">蔬菜</a>
+		    					</li>
+		    					<li class="">
+		    						<a href="#">水果</a>
+		    					</li>
+		    					<li class="">
+		    						<a href="#">肉类</a>
+		    					</li>
+		    					<li class="hot-query-highlight">
+		    						<a href="#">调料</a>
+		    					</li>
+		    					<li class="">
+		    						<a href="#">粗粮</a>
+		    					</li>
+		    				</ul>
+	                	</div>
+        			<!--</div>-->
+    			</div>
+			</div>
+		</section>
+		<section>
+			<div class="shop-detail">
+				<div class="detail-primary layui-clear">
+					<div class="primary-goods">
+						<div class="goods-info">
+							<div class="info-box">
+								<h3 class="goods-title">油麦菜</h3>
+								<div class="goods-main">
+									<div class="main-box layui-clear">
+										<dl class="clearfix property-box">
+										    <dt class="property-type property-type-origin" >价格：</dt>
+										  	<dd class="property-cont property-cont-origin" >
+										    	<span id="J_OriginPrice" class="price">¥23.00</span>
+										  	</dd>
+										</dl>
+										<dl class="clearfix property-box">  
+    										<dt class="property-type property-type-now fl"> 促销价 ：</dt>
+									  		<dd class="property-cont property-cont-now fl">
+									    		<span id="J_NowPrice" class="price">¥19.80</span>
+									        </dd>
+									  		<dd class="property-extra fr">
+											    <span class="mr10">评价：<var class="num">1</var></span>
+											    <span>累计销量：<var class="num J_SaleNum">24</var> </span>
+										  	</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="goods-prowrap goods-im">
+								    <dl class="layui-clear">
+								        <dt>客服：</dt>
+								        <dd>
+								        	<div class="mlstalk_widget_btn" data-shopid="14nse" data-bid="14nse" style="cursor:pointer" data-style="default" data-toid="" data-tid="">联系客服</div>
+								        </dd>
+								    </dl>
+							    </div>
+								<div class="goods-prowrap goods-sku">
+									<div class="content">
+										<div class="box">
+											<dl class="size clearfix" style="display: block;">
+						        				<dt>重量：</dt>
+						        				<dd>
+						        					<ol class="J_SizeList size-list clearfix">
+						        					  	<li data-id="100" title="500g">500g</li>
+						        					</ol>
+						        				</dd>
+						      				</dl>
+											<dl class="layui-clear">
+												<dt>数量：</dt>
+												<dd class="num layui-clear">
+													<div id="J_GoodsNum" class="goods-num fl" data-stock="980">
+								                        <span class="num-reduce num-disable"></span>
+								                        <input class="num-input" value="1" type="text">
+								                        <span class="num-add "></span>
+								                    </div>
+								                    <div class="J_GoodsStock goods-stock fl" >库存80件</div>
+													<div class="J_GoodsStockTip goods-stock-tip fl"><img src="img/icon-tishi.png">您所填写的商品数量超过库存！</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="goods-buy layui-clear">
+										<a href="pay-now.html" id="J_BuyNow" class="fl mr10 buy-btn buy-now">立刻购买</a>
+										<a href="shopcard.html" id="J_BuyCart" class="fl mr10 buy-cart buy-btn">加入购物车</a>
+									</div>
+								</div>
+								<div class="goods-extra layui-clear">
+									<div class="extra-services layui-clear">
+										<div class="fl layui-clear label">服务承诺：</div>
+										<ul class="fl layui-clear list" style="">
+											<li class="item"><span class="link"><img src="img/icon-tui.png">退货补运费</span></li>
+											<li class="item"><span class="link"><img src="img/icon-tui.png">退货补运费</span></li>
+											<li class="item"><span class="link"><img src="img/icon-tui.png">退货补运费</span></li>
+											<li class="item"><span class="link"><img src="img/icon-tui.png">退货补运费</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="J_GoodsImg" class="fl goods-topimg">
+							<div class="big-img" id="J_BigImgs">
+								<button class="middle">
+									<img src="img/cabbage2.jpg"  width="400px"/>
+								</button>
+							</div>
+							<div class="small-img" id="J_SmallImgs">
+								<div class="box">
+									<ul class="layui-clear carousel" id="imgShow">
+										<li class=""><img src="img/cabbage.jpg"></li>
+										<li class=""><img src="img/cabbage2.jpg"></li>
+										<li class=""><img src="img/cabbage3.jpg"></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+						<div class="primary-slide">
+					<div class="goods-recommend">
+						<p class="title"><s></s><span>热卖推荐</span></p>
+						<div class="list">
+							<div class="box">
+								<ul>
+									<li>
+										<a target="_blank" href="#"><img src="img/cabbage2.jpg"><span>￥5.50</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="#"><img src="img/cabbage2.jpg"><span>￥5.50</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="#"><img src="img/cabbage2.jpg"><span>￥5.50</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="layui-tab tb-tabbar-wrap ">
+			  	<ul class="layui-tab-title">
+				    <li class="layui-this">累积评论（10）</li>
+				    <li>专项服务</li>
+			  	</ul>
+			  	<div class="layui-tab-content">
+			    	<div class="layui-tab-item layui-show">
+			      		<ul id="remark-box">
+							<li class="J_KgRate_ReviewItem kg-rate-ct-review-item" tabindex="0">
+								<div class="from-whom">
+									<img class="avatar" src="img/user_avatar/1.jpg">
+									<div>南***星</div>
+								</div>
+								<div class="review-details">
+									<div class="tb-rev-item " data-id="">
+										<div class="J_KgRate_ReviewContent tb-tbcr-content ">
+											   第二次买了 很好
+										</div>
+										<div class="tb-rev-item-media">
+											<ul class="kg-photo-viewer-thumb-bar tb-tbcr-mt">
+												<li class="photo-item">
+													<img mp4-src="" swf-src="" src="img/cabbage.jpg">
+												</li>
+											</ul>
+										</div>
+										<div class="tb-r-act-bar">
+											<div class="tb-r-info">
+												<span class="tb-r-date">2018年04月09日 10:21</span><span class="size">重量：500g</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div id="demo0"></div>
+			    	</div>
+			    	<div class="layui-tab-item">
+			    		<div id="J_MainWrap" class="main-wrap  J_TRegion">
+			    			<div id="service">
+			    				<div class="kg-contract">
+			    					<h2 class="service-list-title"><em>承诺以下服务</em></h2>
+			    					<ul class="service-list-items">
+			    						<li class="service-item">
+			    							<img class="icon" src="img/icon-service.png">
+			    							<div class="info">
+			    								<h3 class="name">消费者保障服务</h3>
+			    								<div class="detail">绿色纯天然</div>
+			    								<p>在确认收货 15 天内，如有商品质量问题、描述不符或未收到货等，您有权申请退款或退货。</p>
+			    							</div>
+			    						</li>
+			    					</ul>
+			    				</div>
+			    			</div>
+			    		</div>
+			    	</div>
+			  	</div>
+			</div>
+		</section>
+		<footer class="footer" >
+			<ul class="layui-clear">
+				<li>
+					<span>服务保证</span>
+					<ul>
+						<li>正品保证</li>
+						<li>绿色新鲜</li>
+						<li>按时送达</li>
+						<li>7&#215;15小时客户服务</li>
+					</ul>
+				</li>
+				<li>
+					<span>支付方式</span>
+					<ul>
+						<li>在线支付</li>
+						<li>货到付款</li>
+						<li>分期付款</li>
+						<li>转账付款</li>
+					</ul>
+				</li>
+				<li>
+					<span>商家服务</span>
+					<ul>
+						<li>商家入驻</li>
+						<li>广告服务</li>
+						<li>服务市场</li>
+						<li>培训中心</li>
+					</ul>
+				</li>
+				<li>
+					<span>物流配送</span>
+					<ul>
+						<li>免配送费</li>
+						<li>211限时达</li>
+						<li>专人配送</li>
+						<li>EMS</li>
+					</ul>
+				</li>
+				<li><div><img src="img/index/bg-code.png"></div></li>
+			</ul>
+			<div class="lg-footer J-loginLanguage">
+	    		<!--copyright start-->
+			    <div class="copyright">
+			        <p class="tag-line">
+			            Copyright &copy; 2017<script>
+			            	new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());
+			            </script> 
+			            <span>蒋中梅&nbsp;版权所有</span>
+			        </p>
+			    </div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="layui/layui.js" ></script>
+		<script type="text/javascript" src="js/address/jquery.min.js"></script>
+		<script type="text/javascript" src="js/public/base.js"></script><!--小广告-->
+		<script type="text/javascript" src="js/vegetableInfo.js"></script>
+		<script>
+			layui.use('element', function(){
+			  	var $ = layui.jquery
+			  	,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+			  
+			  	//触发事件
+			  	var active = {
+			    	tabAdd: function(){
+				      	//新增一个Tab项
+				      	element.tabAdd('demo', {
+				       		title: '新选项'+ (Math.random()*1000|0) //用于演示
+				        	,content: '内容'+ (Math.random()*1000|0)
+				        	,id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+				      	})
+			    	}
+				    ,tabDelete: function(othis){
+				      	//删除指定Tab项
+				      	element.tabDelete('demo', '44'); //删除：“商品管理”
+				      	othis.addClass('layui-btn-disabled');
+				    }
+			    	,tabChange: function(){
+			      		//切换到指定Tab项
+			      		element.tabChange('demo', '22'); //切换到：用户管理
+			    	}
+			  	};
+			  	$('.site-demo-active').on('click', function(){
+			    	var othis = $(this), type = othis.data('type');
+			    	active[type] ? active[type].call(this, othis) : '';
+			  	});
+			});
+			layui.use(['laypage', 'layer'], function(){
+				var laypage = layui.laypage,layer = layui.layer;
+				var data = getRemark();
+				 //总页数低于页码总数
+				laypage.render({
+				    elem: 'demo0'
+				    ,count: data.length //数据总数
+				    ,limit: 6//每页显示的条数
+				    ,first: '首页'
+		    		,last: '尾页'
+		    		,prev: '<em>←</em>'
+		    		,next: '<em>→</em>'
+		    		,curr: location.hash.replace('#page=', '') //获取hash值为fenye的当前页
+		    		,hash: 'page' //自定义hash值
+			    	,theme: '#30940E'//自定义主题 
+			    	,jump: function(obj){
+			    	if(document.getElementById('remark-box')){
+			    		document.getElementById('remark-box').innerHTML = function(){
+				        	var arr = [],
+				        	thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+				        	layui.each(thisData, function(index, item){
+				          		arr.push('<li class="J_KgRate_ReviewItem kg-rate-ct-review-item" tabindex="0">'+ item +'</li>');
+			        		});
+			        		return arr.join('');
+				      	}();
+			    	}
+		      		
+			    }
+				});
+			});
+			function getRemark(total=100) {
+				var str = [];
+				for (var i = 0; i < total; i++) {
+					str[i]='<div class="from-whom">\
+								<img class="avatar" src="img/user_avatar/1.jpg">\
+								<div>南***星'+i+'</div>\
+							</div>\
+							<div class="review-details">\
+								<div class="tb-rev-item " data-id="">\
+									<div class="J_KgRate_ReviewContent tb-tbcr-content ">\
+										   第二次买了 很好\
+									</div>\
+									<div class="tb-rev-item-media">\
+										<ul class="kg-photo-viewer-thumb-bar tb-tbcr-mt">\
+											<li class="photo-item">\
+												<img mp4-src="" swf-src="" src="img/cabbage.jpg">\
+											</li>\
+										</ul>\
+									</div>\
+									<div class="tb-r-act-bar">\
+										<div class="tb-r-info">\
+											<span class="tb-r-date">2018年04月09日 10:21</span><span class="size">重量：500g</span>\
+										</div>\
+									</div>\
+								</div>\
+							</div>';
+				}
+				return str;
+			}
+		</script>
+	</body>
+</html>

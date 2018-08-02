@@ -1,0 +1,140 @@
+.order-box{
+	border-top:2px solid #30940E;
+	min-height: 600px;
+	margin: 70px 150px 0px 150px;
+	padding-top: 30px;
+	float: left;
+	width: 100%;
+}
+.order-tit{
+	margin-top: 22px;
+	margin-bottom: 22px;
+	position: relative;
+	border-bottom: 2px solid #e8e8e8;
+}
+.order-tit-list{
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+.order-tit-text{
+	display: inline-block;
+	line-height: 1;
+	padding: 0 20px 12px;
+	font-size: 16px;
+}
+.order-tit-text>var{color:#30940E ;}
+.order-tit-line{
+	color: #e8e8e8;
+	width: 100%;
+	line-height: 1;
+	font-size: 16px;
+}
+.order-tit-text:hover,.order-tit-selected{
+	color: #30940E;
+	cursor: pointer;
+	border-bottom: 2px solid #30940E;
+}
+.order-tishi{
+	margin: 10px 0;
+	background-color: #f5f5f5;
+	border: 1px solid #e8e8e8;
+	text-align: center;
+}
+.order-tishi>li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: 400;
+	float: left;
+}
+.order-list{
+	margin: 10px 0;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	color: #3c3c3c;
+	table-layout: fixed;
+}
+.tit-info,.order-num{
+	margin-left: 20px;
+	float: left;
+	text-align: left;
+	border-collapse: collapse;
+	border-spacing: 0;
+	color: #3c3c3c;
+	line-height: 50px;
+}
+.tit-info>img{
+	display: inline-block;
+	width: 13px;
+	vertical-align: middle;
+	margin-right: 8px;
+	line-height: 50px;
+	margin-top: 19px;
+	float:left;
+}
+.tit-info>time{
+	display: block;line-height: 50px;	float:left;
+}
+.order-list>div>div{
+	background: #eaf8ff;
+	height: 80px;
+	line-height: 24px;
+}
+.order-list-detail {
+	border-collapse: collapse;
+	border-spacing: 0;
+	color: #3c3c3c;
+	border: 1px solid #daf3ff;
+}
+.order-commodity{
+	margin-left: 20px;
+	padding: 10px;
+	text-align: left;
+}
+.commodity-img{
+	width: 80px;
+	margin-bottom: 10px;
+	float: left;
+}
+.commodity-img>a {
+    color: #3c3c3c;
+    text-decoration: none;
+    word-break: break-all;
+}
+ .commodity-img>a>img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.commodity-text,.commodity-unit-price,.commodity-num,.commodity-real-pay,.commodity-status,.commodity-operate{
+	text-align: center;
+	line-height: 30px;
+}
+.commodity-text{
+	margin-left: 20px;
+	text-align: left;
+	float: left;
+}
+.commodity-unit-price>s,.commodity-unit-price>var,.commodity-num>var,.commodity-real-pay,.commodity-status>span,.commodity-operate>button{
+	display: block;
+	width: 100%;
+	font-weight: 700;
+}
+.commodity-unit-price>s{
+	color: #9c9c9c;
+}
+.commodity-unit-price>var,.commodity-num>var,.commodity-real-pay{
+	color: #30940E;
+}
+.commodity-operate>button{
+	margin-right: auto;
+	margin-left: auto;
+	border:0px;
+	background: #30940E;
+	color: #fff;
+	line-height: 30px;
+	border-radius: 10px;
+	letter-spacing: 3px;
+	width: 75%;
+}

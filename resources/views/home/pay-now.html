@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>订单付款-生鲜网</title>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/index.css" media="all" />
+		<link rel="stylesheet" href="css/plulic.css" media="all" >
+		<link rel="stylesheet" href="css/pay-now.css" media="all" >
+		<link rel="stylesheet" href="css/shopcard.css"media="all" >
+		<link rel="stylesheet" href="css/userInfo.css" media="all" >
+		<link rel="stylesheet" href="css/city-picker.css"  media="all"/><!--地址联动样式-->
+		<link href='img/index/logo.png' rel='icon' type='image/x-icon'/>
+	</head>
+	<body>
+		<nav>
+			<ul class="layui-nav layui-row">
+				<!--<li class="layui-nav-item">
+			    	<a href="">控制台<span class="layui-badge">9</span></a>
+			  	</li>-->
+			  	<li class="layui-nav-item layui-col-xs2 layui-col-sm2 layui-col-md1">
+			    	<a href="">请登录</a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs1 layui-col-sm1 layui-col-md1">
+			    	<a href="">注册</a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs3 layui-col-sm1 layui-col-md4" style="display: none;">
+			    	<a href="">个人中心<span class="layui-badge-dot"></span></a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs2 layui-col-sm1 layui-col-md1" style="display: none;">
+			    	<a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+			    	<dl class="layui-nav-child">
+			      		<dd><a href="javascript:;">我的信息</a></dd>
+			      		<dd><a href="javascript:;">修改信息</a></dd>
+			      		<dd><a href="javascript:;">退出</a></dd>
+			    	</dl>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs3 layui-col-sm3 layui-col-md1" style="margin-right: 0px;" >
+			    	<a href=""><img src="img/index/icon-shop-cart.png" class="layui-nav-img" >购物车<span class="layui-badge" >119</span></a>
+			    </li>
+			    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1" >
+			    	<a href=""><img src="img/index/icon-order.png" class="layui-nav-img">我的订单</a>
+			  	</li>
+			    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1">
+			    	<a href=""><img src="img/index/icon-fen.png" class="layui-nav-img">网站导航</a>
+			    	<dl class="layui-nav-child" style="text-indent: 10px;">
+			      		<dd><a href="javascript:;">蔬菜类</a></dd>
+			      		<dd><a href="javascript:;">水果类</a></dd>
+			      		<dd><a href="javascript:;">副食类</a></dd>
+			      		<dd><a href="javascript:;">肉类</a></dd>
+			      		<dd><a href="javascript:;">调料类</a></dd>
+			    	</dl>
+			    </li>
+			</ul>
+		</nav>
+		<section>
+			<div id="App" class="jet">
+				<div class="page page-main">
+					<div id="confirmOrder_1" class="order-confirmOrder">
+						<div class="order-stepbar">
+							<h1 class="buy-logo">
+								<a href="index.html" target="_top" title="生鲜网"><i></i><span>生鲜网</span></a>
+							</h1>
+							<ol class="tb-stepbar">
+								<li class="stepbar-4 stepbar-first ">
+									<span class="stepbar-current">1. 确认订单信息</span>
+									<i class="current"></i>
+								</li>
+								<li class="stepbar-4" >
+									<span>2. 付款</span>
+									<i></i>
+								</li>
+								<li class="stepbar-4" >
+									<span>3. 确认收货</span>
+									<i></i>
+								</li>
+								<li class="stepbar-4 stepbar-last" >
+									<span>4. 双方互评</span>
+								</li>
+							</ol>
+						</div>
+						<div class="order-address">
+							<div class="order-address-wrap">
+								<h3>
+									<span>确认收货地址</span>
+									<span class="manage-address">
+										<a href="#" target="_blank" title="管理我的收货地址" >管理收货地址</a>
+									</span>
+								</h3>
+								<ul class="address-list">
+									<li class="address-wrap default selected">
+										<div class="addressBox">
+											<div class="layui-clear"><i class="marker"></i><span class="marker-tip" >寄送至</span></div>
+											<label class="addressInfo">
+												<input name="address" value="" type="radio"><label class="check"></label>
+												<span class="user-address">
+													<span>重庆市 南岸区 花园路街道 </span>
+													<span>重庆市南岸区环湖路14号（聚丰花园）</span>
+													<span>（</span>
+													<span>丽丽</span>
+													<span> 收）</span>
+													<em>15147852963</em>
+												</span>
+												<span class="tips" >
+													<em class="default">默认地址</em>
+													<!--<i class="success success-icon"></i>
+													<span class="success success-tip" >设置成功！</span>-->
+												</span>
+												<a class="modify" href="javascript:void(0);" >修改本地址</a>
+											</label>
+										</div>
+									</li>
+									<li class="address-wrap">
+										<div class="addressBox">
+											<label class="addressInfo">
+												<input name="address" value="" type="radio"><label></label>
+												<span class="user-address">
+													<span>重庆市 南岸区 花园路街道 </span>
+													<span>重庆市南岸区环湖路14号（聚丰花园）</span>
+													<span>（</span>
+													<span>丽丽</span>
+													<span> 收）</span>
+													<em>15147852963</em>
+												</span>
+												<span class="tips" >
+													<em class="set-default">设置为默认收货地址</em>
+													<!--<i class="success success-icon"></i>
+													<span class="success success-tip" >设置失败！</span>-->
+												</span>
+												<a class="modify" href="javascript:void(0);" >修改本地址</a>
+											</label>
+										</div>
+									</li>
+								</ul>
+								<div class="btn-bar">
+									<a class="newAddrBtn" href="javascript:void(0);" ><i id="addAddress"></i><label>使用新地址</label></a>
+								</div>
+							</div>
+						</div>
+						<div id="orderDesc_0" class="order-orderDesc">
+							<h2 class="buy-th-title" >确认订单信息</h2>
+						</div>
+						<div id="J_CartMain" class="cart-main">
+						<div class="cart-table-th">
+							<div class="wp">
+								<div class="th th-item">
+									<div class="td-inner">商品信息</div>
+								</div>
+								<div class="th th-info">
+									<div class="td-inner">kong</div>
+								</div>
+								<div class="th th-price">
+									<div class="td-inner">单价</div>
+								</div>
+								<div class="th th-amount">
+									<div class="td-inner">数量</div>
+								</div>
+								<div class="th th-sum">
+									<div class="td-inner">金额</div>
+								</div>
+							</div>
+						</div>
+						<div class="" id="J_OrderList">
+							<div id="J_OrderHolder" style="height: auto;">
+								<div class="J_Order layui-clear order-body">
+									<div class="J_ItemHead shop layui-clear">
+										<div class="order-promo-info">
+											<div class="scrolling-container">
+												<ul class="scrolling-promo-hint J_ScrollingPromoHint" style="position: relative;top: 0px;">
+													<li class="ks-switchable-panel-internal151" style="display: block;"></li>
+													<li class="ks-switchable-panel-internal151" style="display: block;"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="order-content">
+										<div  class="item-list">
+											<div   class="bundle  bundle-last ">
+												<div  class="item-holder">
+													<div class="J_ItemBody item-body layui-clear item-normal  first-item ">
+														<ul class="item-content layui-clear ">
+															<li class="td td-item">
+																<div class="td-inner">
+																	<div class="item-pic J_ItemPic img-loaded" style="margin-left: 20px;">
+																		<a href="#" target="_blank" data-title="" class="J_MakePoint" data-point="tbcart.8.12" data-spm-anchor-id="a1z0d.6639537.1997196601.3">
+																			<img src="img/cabbage2.jpg" class="itempic J_ItemImg">
+																		</a>
+																	</div>
+																	<div class="item-info">
+																		<div class="item-basic-info">
+																			<a href="#" class="item-title J_MakePoint" target="_blank" title="">包菜</a>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-info"> 
+																<div class="item-props item-props-can">
+																	<p class="sku-line" tabindex="0">重量：500g</p>
+																	<span tabindex="0" class="btn-edit-sku J_BtnEditSKU J_MakePoint" data-point="tbcart.8.10">修改</span>
+																</div>
+															</li>
+															<li class="td td-price"> 
+																<div class="td-inner">
+																	<div class="item-price price-promo-">
+																		<div class="price-content">
+																			<div class="price-line">
+																				<em class="price-original">￥59.00</em>
+																			</div>
+																			<div class="price-line">
+																				<em class="J_Price price-now" tabindex="0">￥17.90</em>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-amount"> 
+																<div class="td-inner">
+																	<div class="amount-wrapper ">
+																		<div class="item-amount ">
+																			<a href="#" class="J_Minus minus active">-</a>
+																			<input value="1" class="text text-amount J_ItemAmount" data-max="4579" data-now="1" autocomplete="off" type="text">
+																			<a href="#" class="J_Plus plus active ">+</a>
+																		</div>
+																		<div class="amount-msg J_AmountMsg">
+																			
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-sum">
+																<div class="td-inner">
+																	<em tabindex="0" class="J_ItemSum number">￥81.60</em>
+																	<div class="J_ItemLottery"></div>
+																</div> 
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="order-orderExt">
+										<div class="order-extUser">
+											<div class="order-memo">
+												<label class="memo-name" >给卖家留言：</label>
+												<div class="memo-hint">
+													<a class="class="hint-title"">重要提醒</a>
+													<div class="mui-msg mui-msg-normal hint-content">
+														<ins class="mui-msg-icon mui-msg-icon-tip" ></ins>
+													</div>
+												</div>
+												<div class="memo-detail">
+													<textarea class="text-area-input memo-input" placeholder="选填:填写内容已和卖家协商确认" ></textarea>
+													<div></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="order-extInfo">
+										<div class="order-deliveryMethod">
+											<div>
+												<div class="delivery-title">运送方式:</div>
+												<div class="delivery-select">
+													<div>
+														<div class="select-item">
+															<div class="select-info">
+																<div class="delivery-box">
+																	<div>
+																		<label>普通配送</label>
+																		<span>快递&#165;2.00</span>
+																		<span></span>
+																	</div>
+																</div>
+															</div>
+															<div class="select-price">2.00</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+											<div class="order-deliveryMethod">
+											<div>
+												<div class="delivery-title">积分抵扣:</div>
+												<div class="delivery-select">
+													<div>
+														<div class="select-item">
+															<div class="select-info">
+																<div class="delivery-box">
+																	<div>
+																		<label>100积分</label>
+																		<span>&#165;0.2</span>
+																		<span></span>
+																	</div>
+																</div>
+															</div>
+															<div class="select-price">-2.00</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="orderPay">
+										<span>合计</span>
+										<span>(含运费)</span>
+										<span class="price g_price">
+											<span>&#165;</span>
+											<em class="style-middle-bold-red J_ShopTotal">20.00</em>
+										</span>
+									</div>
+									<div class="order-payInfo">
+										<div class="payInfo-wrapper">
+											<div class="payInfo-shadow">
+												<div class='order-realPay'>
+													<div>
+														<span class="realPay-title">实付款：</span>
+														<span class="order-price">&#165;</span>
+														<span class="realPay-price">65.00</span>
+													</div>
+												</div>
+												<div class="order-confirmAddr">
+													<div class="confirmAddr-addr" title="南岸区花园路街道 重庆市南岸区环湖路14号（聚丰花园）">
+														<span class="confirmAddr-title">寄送至：</span>
+														<span class="confirmAddr-addr-bd">
+															<span class="prov">重庆</span>
+															<span class="city" >重庆市</span>
+															<span class="dist" >南岸区</span>
+															<span class="town" >花园路街道</span>
+															<span class="street" data-street="重庆市南岸区环湖路14号（聚丰花园）">重庆市南岸区环湖路14号（聚丰花园）</span>
+														</span>
+													</div>
+												</div>
+												<div class="confirmAddr-addr-user">
+													<span class="confirmAddr-title" >收货人：</span>
+													<span class="confirmAddr-addr-bd">
+														<span >丽丽</span>
+														<span >15123456789</span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="submitOrder_1" class="order-submitOrder">
+										<div class="wrapper">
+											<a role="button" title="提交订单" class="go-btn">提交订单</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer" style="top:200px">
+			<ul class="layui-clear">
+				<li>
+					<span>服务保证</span>
+					<ul>
+						<li>正品保证</li>
+						<li>绿色新鲜</li>
+						<li>按时送达</li>
+						<li>7&#215;15小时客户服务</li>
+					</ul>
+				</li>
+				<li>
+					<span>支付方式</span>
+					<ul>
+						<li>在线支付</li>
+						<li>货到付款</li>
+						<li>分期付款</li>
+						<li>转账付款</li>
+					</ul>
+				</li>
+				<li>
+					<span>商家服务</span>
+					<ul>
+						<li>商家入驻</li>
+						<li>广告服务</li>
+						<li>服务市场</li>
+						<li>培训中心</li>
+					</ul>
+				</li>
+				<li>
+					<span>物流配送</span>
+					<ul>
+						<li>免配送费</li>
+						<li>211限时达</li>
+						<li>专人配送</li>
+						<li>EMS</li>
+					</ul>
+				</li>
+				<li><div><img src="img/index/bg-code.png"></div></li>
+			</ul>
+			<div class="lg-footer J-loginLanguage">
+	    		<!--copyright start-->
+			    <div class="copyright">
+			        <p class="tag-line">
+			            Copyright &copy; 2017<script>
+			            	new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());
+			            </script> 
+			            <span>蒋中梅&nbsp;版权所有</span>
+			        </p>
+			    </div>
+			</div>
+		</footer>
+		<section>
+			<div class="bg" id="bg">
+				<div class="form-box">
+					<div></div>
+					<div class='item item-title '>
+						<span class="item-label tsl">新增收货地址</span>
+						<i></i>
+					</div>
+					<form class="layui-form" action="">
+						<div class="layui-form-item" data-info="所在地区">
+							<label class="layui-form-label">所在地区<i>*</i></label>
+					    	<div class="layui-input-block"><!--data-toggle="city-picker" -->
+					    		<input id="city-picker" class="cityPicker" size="70" data-toggle="city-picker"  name="title" lay-verify="title"  autocomplete="off" placeholder="点击从下拉面板中选择省/市/区/县" class="layui-input" type="text" value="重庆/南岸区/内环以内" data-value="">
+					    		<!--<input id="set" type="button" value="重置" class="layui-btn layui-btn-normal">-->
+					    	</div>
+						</div>
+						<div class="layui-form-item layui-form-text" data-info="详细地址">
+						    <label class="layui-form-label">详细地址<i>*</i></label>
+						    <div class="layui-input-block">
+						    	<textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+						    </div>
+						</div>
+						<div class="layui-form-item" data-info="收货人">
+						    <label class="layui-form-label">收货人姓名<i>*</i></label>
+						    <div class="layui-input-block">
+						    	<input name="title" lay-verify="title" autocomplete="off" placeholder="长度不超过25个字符" class="layui-input" type="text" style="background: #fff;">
+						    </div>
+						</div>
+						<div class="layui-inline" data-info="手机">
+					      	<label class="layui-form-label">手机号码<i>*</i></label>
+					      	<div class="layui-input-inline">
+					      		<input name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input" type="tel">
+					      	</div>
+					    </div>
+					    <div  class="form-item set"><button class="btn" id="save">保存</button></div>
+					</form>
+				</div>	
+			</div>
+		</section>
+ 		<script type="text/javascript" src="layui/layui.js" ></script>
+   		<script type="text/javascript" src="js/address/jquery.min.js"></script>
+   		<script type="text/javascript" src="js/address/city-picker.data.js"></script>
+		<script type="text/javascript" src="js/address/city-picker.js"></script>
+		<script type="text/javascript" src="js/public/base.js"></script><!--小广告-->
+		<script type="text/javascript">
+			var height=document.body.scrollHeight,width=window.screen.availWidth;
+			//设置遮罩层
+			$('#bg').hide().css({'background':'rgba(0,0,0,0.5)',
+				'height':height+'px',
+				'width': width +'px',
+				'marginTop':- height+200 +'px',
+				'zIndex':'100'
+		}).children('.form-box').hide().css({
+				'margin':'0px auto',
+				'marginTop': (height-$('.form-box').outerHeight(true))/2+'px',
+				'textAglin':'center',
+				'zIndex':'101',
+				'position':'relative',
+				
+			}).find('#city-picker').css({"marginTop":'-28px','position':'relative'});
+			//点击“使用新按钮”旁边的加号
+			$('#addAddress').on('click',function(){
+				$('#bg').show().children('.form-box').show();
+			})
+			//点击保存按钮
+			$("#save").on('click',function(){
+				$('#bg').hide().children('.form-box').hide();
+			})
+			//设置默认地址
+			$('.address-wrap').on({
+				'mouseover':function(){
+					$('.address-wrap').find('.set-default').hide();
+					$(this).find('.set-default').show()
+				},
+				'mouseout':function(){
+					$('.address-wrap').find('.set-default').hide();
+				}
+			})
+			$(".set-default").on({
+				'click':function(){
+					var _this=this;
+					$('.address-list').each(function(){
+						var _t=this;
+						console.log($(_t).find('.default'),111);
+						if($(_t).find('em').hasClass('default')){
+							var em=$(_t).find('em.default');
+							em.removeClass('default').addClass('set-default').html('设置为默认地址').parent().prev().prev().removeClass('check');
+						}
+					})
+					$(_this).removeClass('set-default').addClass('default').html('默认地址').show().parent().prev().prev().addClass('check');
+				}
+			})
+		</script>
+	</body>
+</html>

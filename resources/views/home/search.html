@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>生鲜蔬菜-生鲜网</title>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/index.css" media="all" />
+		<link rel="stylesheet" href="css/plulic.css" media="all" >
+		<link  rel="stylesheet" href="css/search.css" media="all" />
+		<link href='img/index/logo.png' rel='icon' type='image/x-icon'/>
+	</head>
+	<body>
+		<nav>
+			<ul class="layui-nav layui-row">
+				<!--<li class="layui-nav-item">
+			    	<a href="">控制台<span class="layui-badge">9</span></a>
+			  	</li>-->
+			  	<li class="layui-nav-item layui-col-xs2 layui-col-sm2 layui-col-md1">
+			    	<a href="">请登录</a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs1 layui-col-sm1 layui-col-md1">
+			    	<a href="">注册</a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs3 layui-col-sm1 layui-col-md4" style="display: none;">
+			    	<a href="">个人中心<span class="layui-badge-dot"></span></a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs2 layui-col-sm1 layui-col-md1" style="display: none;">
+			    	<a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+			    	<dl class="layui-nav-child">
+			      		<dd><a href="javascript:;">我的信息</a></dd>
+			      		<dd><a href="javascript:;">修改信息</a></dd>
+			      		<dd><a href="javascript:;">退出</a></dd>
+			    	</dl>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs3 layui-col-sm3 layui-col-md1" style="margin-right: 0px;" >
+			    	<a href=""><img src="img/index/icon-shop-cart.png" class="layui-nav-img" >购物车<span class="layui-badge" >119</span></a>
+			    </li>
+			    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1" >
+			    	<a href=""><img src="img/index/icon-order.png" class="layui-nav-img">我的订单</a>
+			  	</li>
+			    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1">
+			    	<a href=""><img src="img/index/icon-fen.png" class="layui-nav-img">网站导航</a>
+			    	<dl class="layui-nav-child" style="text-indent: 10px;">
+			      		<dd><a href="javascript:;">蔬菜类</a></dd>
+			      		<dd><a href="javascript:;">水果类</a></dd>
+			      		<dd><a href="javascript:;">副食类</a></dd>
+			      		<dd><a href="javascript:;">肉类</a></dd>
+			      		<dd><a href="javascript:;">调料类</a></dd>
+			    	</dl>
+			    </li>
+			</ul>
+		</nav>
+		<section>
+			<div id="header" class="layui-row" data-spm="a2226n0">
+    			<div class="headerLayout layui-col-md12">
+        			<!--<div class="headerCon">-->
+            			<!--<h1 id="mallLogo">
+                			<span class="mlogo">
+                				<a href="" title="shengxian.com"><s></s>shengxian.com</a>
+                			</span>
+                		</h1>-->
+             			<div class="j_logo logo-con" data-spm="2015002">
+							<img class="sxian-logo-img" src="img/index/logo.png" style="margin: 1px auto;display:block" data-spm-anchor-id="875.7931836/B.2015002.i0.4dc149926MkTg4" width="240px" height="130px">
+						</div>
+            			<div class="header-extra">
+                			<div class="header-banner">
+                        		<div>
+                    			</div>
+                			</div>
+               			</div>
+             			<div id="mallSearch" class="mall-search">
+	        				<form name="searchTop" action="" class="mallSearch-form clearfix" target="_top" acceptcharset="gbk" accept-charset="gbk">
+		            			<fieldset>
+			                		<legend>生鲜搜索</legend>
+			                      	<div class="mallSearch-input clearfix">
+			                        	<label for="mq" style="visibility: visible; display: none;">搜索</label>
+		                          		<div class="s-combobox" id="s-combobox-138">
+		                              		<div class="s-combobox-input-wrap">
+		                                    	<input name="q" accesskey="s" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate" value="" id="mq" class="s-combobox-input" role="combobox" aria-haspopup="true" title="请输入搜索文字" aria-label="请输入搜索文字" type="text">
+		                              		</div>
+		                          			<label for="mq" class="s-combobox-placeholder" style="color: rgb(102, 102, 102); visibility: visible;">搜索 </label>
+		                          		</div>
+			                          	<button type="submit">搜索<s></s></button>
+			                          	<input id="J_Type" name="type" value="p" type="hidden">
+			                          	<input id="J_MallSearchStyle" name="style" value="" type="hidden">
+			                          	<input id="J_Cat" name="cat" value="all" type="hidden">
+			                          	<input name="vmarket" value="" type="hidden">
+			                      	</div>
+		             			</fieldset>
+	         				</form>
+		    				<ul data-spm="a1z5h" class="hot-query">
+		    					<li class="hot-query-highlight">
+		    						<a href="#">蔬菜</a>
+		    					</li>
+		    					<li class="">
+		    						<a href="#">水果</a>
+		    					</li>
+		    					<li class="">
+		    						<a href="#">肉类</a>
+		    					</li>
+		    					<li class="hot-query-highlight">
+		    						<a href="#">调料</a>
+		    					</li>
+		    					<li class="">
+		    						<a href="#">粗粮</a>
+		    					</li>
+		    				</ul>
+	                	</div>
+        			<!--</div>-->
+    			</div>
+			</div>
+		</section>
+		<section>
+			<div id="view" class="view">
+				<div class="product">
+					<div class="product-iWrap">
+						<div class="productImg-wrap">
+							<a target="_blank" href="#">
+								<img src="img/index/AD0IgPCDBxAEGAAg45GqzQUoiJuxmAYwmgI48gE.png">
+							</a>
+							<p class="productPrice">
+								<em title="23.80"><b>¥</b>23.80</em>
+							</p>
+							<p class="productTitle">
+								<a href="#" target="_blank" title="现摘现货农家新鲜蔬菜水果玉米5斤带皮超甜黄金非转基因嫩玉米棒" >
+									现摘现货农家新鲜<span class="H">蔬菜</span>水果玉米5斤带皮超甜黄金非转基因嫩玉米棒
+								</a>
+							</p>
+							<div class="productShop" data-atp="b!1-3,{user_id},,,,,,">
+								 <a class="productShop-name" href="#" target="_blank">
+								滋果果旗舰店
+								</a>
+							</div>
+							<p class="productStatus">
+								<span>月成交 <em>391笔</em></span>
+								<span>评价 <a href="#" target="_blank">315</a></span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div id="demo7"></div>
+		</section>
+		<script type="text/javascript" src="js/public/jquery-1.9.1.min.js" ></script>
+		<script src="layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/public/base.js"></script><!--小广告-->
+		<script type="text/javascript" >
+			//添加数据
+			//var table = document.body.querySelector('.view');
+			//var cells = document.body.querySelectorAll('.product');
+			function getArr(total=100) {
+				var str = [];
+				for (var i = 0; i < total; i++) {
+					var data=[],imgSrc="img/index/AD0IgPCDBxAEGAAg45GqzQUoiJuxmAYwmgI48gE.png",//图片路径
+						price=23.80,//价格
+						introduce='现摘现货农家新鲜蔬菜水果玉米5斤带皮超甜黄金非转基因嫩玉米棒',//介绍
+						shop='滋果果旗舰店',//店铺
+						trebmls='391',//月成交
+						evaluat='315';//评价
+						str[i] = '<div class="product-iWrap">';
+						str[i] +='<div class="productImg-wrap"><a target="_blank" href="#">';
+						str[i] +='<img src="'+imgSrc+'"></a>';
+						str[i] +='<p class="productPrice"><em title="'+price+'"><b>¥</b>'+price+'</em></p>';	
+						str[i] +='<p class="productTitle"><a href="#" target="_blank" title="'+introduce+'" >'+introduce+'</a></p>';	
+						str[i] +='<div class="productShop" ><a class="productShop-name" href="#" target="_blank">'+shop+''+i+'</a></div>'	;
+						str[i] +='<p class="productStatus"><span>月成交 <em>'+trebmls+'笔</em></span><span>评价 <a href="#" target="_blank">'+evaluat+'</a></span></p>'	;
+						str[i] +='</div></div>';
+				}
+				return str;
+			}
+			
+			
+			layui.use(['laypage', 'layer'], function(){
+  				var laypage = layui.laypage,layer = layui.layer;
+			  	//测试数据
+			  	var data = getArr();
+			  	//调用分页
+			  	laypage.render({
+				   	elem: 'demo7'//指向存放分页的容器
+				    ,count: data.length//数据总数
+				    ,limit: 10//每页显示的条数
+				    ,layout: ['count', 'prev', 'page', 'next', 'limit', 'skip']//自定义排版。可选值有：count（总条目输区域）、prev（上一页区域）、page（分页区域）、next（下一页区域）、limit（条目选项区域）、 、skip（快捷跳页区域）
+				    ,curr: location.hash.replace('#page=', '') //获取hash值为fenye的当前页
+				    ,hash: 'page' //自定义hash值
+				    ,theme: '#30940E'//自定义主题 
+				    ,jump: function(obj){
+			      		document.getElementById('view').innerHTML = function(){
+				        	var arr = [],
+				        	thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+				        	layui.each(thisData, function(index, item){
+				          		arr.push('<div class="product">'+ item +'</div>');
+			        		});
+			        		return arr.join('');
+				      	}();
+				    }
+			  	});
+			});
+		</script>	
+	</body>
+</html>

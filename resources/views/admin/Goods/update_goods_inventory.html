@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+u{ font-family:黑体; font-size:24px;}
+</style>
+<meta charset="utf-8">
+<title>更改{$detail_goods["goods_name"]}【{$detail_goods["goods_ename"]}】商品库存</title>
+<include file='Common/link'/>
+<script type="text/javascript" src="__PUBLIC__/admin/jquery/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+});
+</script>
+</head>
+
+<body>
+<form action="" method="post">
+<input type="hidden" name="id" value="{$detail_goods.id}">
+<input type="hidden" name="goods_inventory" value="{$detail_goods.goods_inventory}">
+
+ <table class="table table-bordered table-condensed table-hover" id="example">
+ <tr>
+ <th width="150px">商品名称</th>
+ <th>{$detail_goods["goods_name"]}[{$detail_goods["goods_ename"]}]</th>
+ </tr>
+ <!-- 显示商品图片 -->
+ <tr>
+ <th width="150px">商品图片</th>
+ <td>
+      <foreach name="goods_images" item="images">
+      <if condition="$images['product_id']==$detail_goods['id']">
+      <img width="80px" height="80px" src="__PUBLIC__/web/img/goods/{$images.image}">&nbsp;
+      </if>
+      </foreach>
+ </td>
+ </tr>
+  <tr>
+ <th width="150px">当前库存量</th>
+ <th ><b id="inventory" >{$detail_goods.goods_inventory}</b>件</th>
+ </tr>
+ 
+ <tr>
+ <th width="150px">【添加/减少】库存量</th>
+ <th><input type="text" name="kucun" placeholder="请在这里输入该商品的库存量(单位：件)" style=" width:300px; height:40px;" onKeyUp="value=value.replace(/[^\d]/g,'')"/></th>
+ </tr>
+ <tr>
+ <td colspan="2" align="center">
+ 
+   <input type="submit" name="tijiao" value="新增"  class="btn btn-success btn-animate-demo"  onClick="return confirm('当前库存为{$detail_goods.goods_inventory}件，是否确认 新增 库存?');"/>
+   <input type="submit" name="tijiao" value="减少" id="jian" class="btn btn-primary btn-animate-demo"  onClick="return confirm('当前库存为{$detail_goods.goods_inventory}件，是否确认 减少 库存?');"/>
+  
+ </td>
+ </tr>
+ </table>
+ </form>
+</body>
+</html>

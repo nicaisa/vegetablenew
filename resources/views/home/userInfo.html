@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>用户中心-生鲜网</title>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/index.css" media="all" />
+		<link rel="stylesheet" href="css/plulic.css" media="all" >
+		<link rel="stylesheet" href="css/userInfo.css" media="all" >
+		<link rel="stylesheet" href="css/city-picker.css"  media="all"/><!--地址联动样式-->
+		<link href='img/index/logo.png' rel='icon' type='image/x-icon'/>
+	</head>
+	<body>
+		<nav>
+				<ul class="layui-nav layui-row">
+					<!--<li class="layui-nav-item">
+				    	<a href="">控制台<span class="layui-badge">9</span></a>
+				  	</li>-->
+				  	<li class="layui-nav-item layui-col-xs2 layui-col-sm2 layui-col-md1">
+				    	<a href="">请登录</a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs1 layui-col-sm1 layui-col-md1">
+				    	<a href="">注册</a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs3 layui-col-sm1 layui-col-md4" style="display: none;">
+				    	<a href="">个人中心<span class="layui-badge-dot"></span></a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs2 layui-col-sm1 layui-col-md1" style="display: none;">
+				    	<a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+				    	<dl class="layui-nav-child">
+				      		<dd><a href="javascript:;">我的信息</a></dd>
+				      		<dd><a href="javascript:;">修改信息</a></dd>
+				      		<dd><a href="javascript:;">退出</a></dd>
+				    	</dl>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs3 layui-col-sm3 layui-col-md1" style="margin-right: 0px;" >
+				    	<a href=""><img src="img/index/icon-shop-cart.png" class="layui-nav-img" >购物车<span class="layui-badge" >119</span></a>
+				    </li>
+				    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1" >
+				    	<a href=""><img src="img/index/icon-order.png" class="layui-nav-img">我的订单</a>
+				  	</li>
+				    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1">
+				    	<a href=""><img src="img/index/icon-fen.png" class="layui-nav-img">网站导航</a>
+				    	<dl class="layui-nav-child" style="text-indent: 10px;">
+				      		<dd><a href="javascript:;">蔬菜类</a></dd>
+				      		<dd><a href="javascript:;">水果类</a></dd>
+				      		<dd><a href="javascript:;">副食类</a></dd>
+				      		<dd><a href="javascript:;">肉类</a></dd>
+				      		<dd><a href="javascript:;">调料类</a></dd>
+				    	</dl>
+				    </li>
+				</ul>
+			</nav>
+		<section>
+			<div class="user_center_main">
+				<!--  用户信息框分为 左边右边  -->
+				<div class="user_center_main_box layui-clear">
+					<!-- 左边  -->
+					<div class="user_center_left">
+						<p class="menu_tit">账号信息</p>
+						<ul class="menu_group ">
+							<li class="menu_group_list "><a class="hover" href="#"><i class="my-info"></i>我的资料</a></li>
+							<li class="menu_group_list"><a><i class="my-collection" class="#"></i>我的收藏</a></li>
+							<li class="menu_group_list"><a href="shopcard.html"><i class="my-card"></i>我的购物车</a></li>
+						</ul>
+						<p class="menu_tit">账号记录</p>
+						<ul class="menu_group ">
+							<li class="menu_group_list"><a><i class="my-order"></i>我的订单</a></li>
+							<li class="menu_group_list"><a><i class="my-integral"></i>我的积分</a></li>
+							<li class="menu_group_list"><a><i class="my-address"></i>收货地址</a></li>
+						</ul>
+						<p class="menu_tit">账号安全</p>
+						<ul class="menu_group ">
+							<li class="menu_group_list"><a><i class="my-pwd"></i>修改密码</a></li>
+						</ul>
+					</div>
+					<!-- 右边  我的资料 -->
+					<div class="user_center_right">
+						<ul class="avatar_box_ul">
+							<li class="avatar_box_list"><span><img src="img/user_avatar/1.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/2.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/3.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/4.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/5.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/6.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/7.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/8.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/9.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/10.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/11.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/12.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/13.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/15.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/16.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/17.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/18.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/19.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/20.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/21.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/22.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/23.jpg"></span></li>
+							<li class="avatar_box_list"><span><img src="img/user_avatar/up_photo_01.png"></span>上传头像</li>
+							<li class="avatar_box_close"><b class="avatar_box_close_btn">关闭</b></li>	
+						</ul>
+						<div class="user_mian_bar">
+							<p class="user_mian_bar_tit "><span>我的资料</span></p>
+							<ul class="user_mian_bar_box">
+								<li class="user_mian_bar_list"><span class="txt">头像：</span><span class="inf"><img src="img/user_avatar/5.jpg" id="avatar"> </span><img src="img/user_avatar/3.jpg" id="edit-avatar"></li>
+								<li class="user_mian_bar_list"><span class="txt">昵称：</span><span class="inf">吗看看玫琳凯  </span><input type="text" ></li>
+								<li class="user_mian_bar_list">
+									<span class="txt">性别：</span>
+									<span class="inf" >男 </span>
+									<div class="sex-box">
+										<input name="sex" type="radio" value="男" ><label>男</label>
+										<input name="sex" type="radio" value="女" ><label>女</label>
+										<input name="sex" type="radio" value="保密" ><label>保密</label>
+									</div>
+								</li>
+								<li class="user_mian_bar_list"><span class="txt">QQ：</span><span class="inf">4578962</span><input type="text" ></li>
+								<li class="user_mian_bar_list"><span class="txt">微信：</span><span class="inf">4578962</span><input type="text" ></li>
+								<li class="user_mian_bar_list">
+									<span class="txt">生日：</span>
+									<span class="inf">未填写</span>
+									<div class="layui-input-inline" >
+								        <input class="layui-input" id="birthday" placeholder="yyyy-MM-dd" type="text" value="yyyy-MM-dd">
+								    </div>
+								</li>
+								<li class="user_mian_bar_list ">
+									<span class="txt">居住地：</span>
+									<span class="inf">未填写</span>
+									<div class="address"><!--data-toggle="city-picker" -->
+							    		<input id="abode" class="cityPicker" size="70" data-toggle="city-picker"  name="title" lay-verify="title"  autocomplete="off" placeholder="点击从下拉面板中选择省/市/区/县" class="layui-input" type="text" value="重庆/南岸区/内环以内" data-value="">
+							    	</div>
+								</li>
+								<li class="user_mian_bar_list">
+									<span class="txt">家乡：</span>
+									<span class="inf">重庆市 渝中区 花园路街道</span>
+									<div class="address"><!--data-toggle="city-picker" -->
+							    		<input id="home" class="cityPicker" size="70" data-toggle="city-picker"  name="title" lay-verify="title"  autocomplete="off" placeholder="点击从下拉面板中选择省/市/区/县" class="layui-input" type="text" value="重庆/南岸区/内环以内" data-value="">
+							    	</div>
+								</li>
+								<li class="user_mian_bar_list btn_box"><a href="#" class="chang_btn" >修改</a><a href="#" class="chang_btn" >保存</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<section></section>
+		<script type="text/javascript" src="layui/layui.js" ></script>
+		<script type="text/javascript" src="js/address/jquery.min.js"></script>
+		<script type="text/javascript" src="js/public/base.js"></script><!--小广告-->
+		<script type="text/javascript" src="js/address/city-picker.data.js"></script>
+		<script type="text/javascript" src="js/address/city-picker.js"></script>
+		<script type="text/javascript"  src="js/userInfo.js"></script>
+	</body>
+</html>

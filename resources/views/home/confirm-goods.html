@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>确认收货-生鲜网</title>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/index.css" media="all" />
+		<link rel="stylesheet" href="css/plulic.css" media="all" >
+		<link rel="stylesheet" href="css/pay-now.css" media="all" >
+		<link rel="stylesheet" href="css/shopcard.css" media="all">
+	</head>
+	<body>
+		<nav>
+			<ul class="layui-nav layui-row">
+				<!--<li class="layui-nav-item">
+			    	<a href="">控制台<span class="layui-badge">9</span></a>
+			  	</li>-->
+			  	<li class="layui-nav-item layui-col-xs2 layui-col-sm2 layui-col-md1">
+			    	<a href="">请登录</a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs1 layui-col-sm1 layui-col-md1">
+			    	<a href="">注册</a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs3 layui-col-sm1 layui-col-md4" style="display: none;">
+			    	<a href="">个人中心<span class="layui-badge-dot"></span></a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs2 layui-col-sm1 layui-col-md1" style="display: none;">
+			    	<a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+			    	<dl class="layui-nav-child">
+			      		<dd><a href="javascript:;">我的信息</a></dd>
+			      		<dd><a href="javascript:;">修改信息</a></dd>
+			      		<dd><a href="javascript:;">退出</a></dd>
+			    	</dl>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs3 layui-col-sm3 layui-col-md1" style="margin-right: 0px;" >
+			    	<a href="shopcard.html"><img src="img/index/icon-shop-cart.png" class="layui-nav-img" >购物车<span class="layui-badge" >119</span></a>
+			    </li>
+			    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1" >
+			    	<a href="order-all.html"><img src="img/index/icon-order.png" class="layui-nav-img">我的订单</a>
+			  	</li>
+			    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1">
+			    	<a href=""><img src="img/index/icon-fen.png" class="layui-nav-img">网站导航</a>
+			    	<dl class="layui-nav-child" style="text-indent: 10px;">
+			      		<dd><a href="javascript:;">蔬菜类</a></dd>
+			      		<dd><a href="javascript:;">水果类</a></dd>
+			      		<dd><a href="javascript:;">副食类</a></dd>
+			      		<dd><a href="javascript:;">肉类</a></dd>
+			      		<dd><a href="javascript:;">调料类</a></dd>
+			    	</dl>
+			    </li>
+			</ul>
+		</nav>
+		<section>
+				<div id="header" class="layui-row" data-spm="a2226n0">
+        			<div class="headerLayout layui-col-md12">
+            			<!--<div class="headerCon">-->
+                			<!--<h1 id="mallLogo">
+                    			<span class="mlogo">
+                    				<a href="" title="shengxian.com"><s></s>shengxian.com</a>
+                    			</span>
+                    		</h1>-->
+                 			<div class="j_logo logo-con" data-spm="2015002">
+								<img class="sxian-logo-img" src="img/index/logo.png" style="margin: 1px auto;display:block" data-spm-anchor-id="875.7931836/B.2015002.i0.4dc149926MkTg4" width="240px" height="130px">
+							</div>
+                			<div class="header-extra">
+                    			<div class="header-banner">
+                            		<div>
+                        			</div>
+                    			</div>
+                   			</div>
+                 			<div id="mallSearch" class="mall-search">
+		        				<form name="searchTop" action="" class="mallSearch-form clearfix" target="_top" acceptcharset="gbk" accept-charset="gbk">
+			            			<fieldset>
+				                		<legend>生鲜搜索</legend>
+				                      	<div class="mallSearch-input clearfix">
+				                        	<label for="mq" style="visibility: visible; display: none;">搜索</label>
+			                          		<div class="s-combobox" id="s-combobox-138">
+			                              		<div class="s-combobox-input-wrap">
+			                                    	<input name="q" accesskey="s" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate" value="" id="mq" class="s-combobox-input" role="combobox" aria-haspopup="true" title="请输入搜索文字" aria-label="请输入搜索文字" type="text">
+			                              		</div>
+			                          			<label for="mq" class="s-combobox-placeholder" style="color: rgb(102, 102, 102); visibility: visible;">搜索 </label>
+			                          		</div>
+				                          	<button type="submit">搜索<s></s></button>
+				                          	<input id="J_Type" name="type" value="p" type="hidden">
+				                          	<input id="J_MallSearchStyle" name="style" value="" type="hidden">
+				                          	<input id="J_Cat" name="cat" value="all" type="hidden">
+				                          	<input name="vmarket" value="" type="hidden">
+				                      	</div>
+			             			</fieldset>
+		         				</form>
+			    				<ul data-spm="a1z5h" class="hot-query">
+			    					<li class="hot-query-highlight">
+			    						<a href="#">蔬菜</a>
+			    					</li>
+			    					<li class="">
+			    						<a href="#">水果</a>
+			    					</li>
+			    					<li class="">
+			    						<a href="#">肉类</a>
+			    					</li>
+			    					<li class="hot-query-highlight">
+			    						<a href="#">调料</a>
+			    					</li>
+			    					<li class="">
+			    						<a href="#">粗粮</a>
+			    					</li>
+			    				</ul>
+		                	</div>
+            			<!--</div>-->
+        			</div>
+    			</div>
+			</section>
+			<section>
+			<div id="App" class="jet">
+				<div class="page page-main">
+					<div id="confirmOrder_1" class="order-confirmOrder">
+						<div class="order-stepbar" >
+							<h1 class="buy-logo" style="display: none;">
+								<a href="index.html" target="_top" title="生鲜网"><i></i><span>生鲜网</span></a>
+							</h1>
+							<ol class="tb-stepbar" style="height: 77px;position: relative;">
+								<li class="stepbar-4 stepbar-first ">
+									<span class="stepbar-success">1. 确认订单信息</span>
+									<i class="success"></i>
+								</li>
+								<li class="stepbar-4" >
+									<span class="stepbar-success">2. 付款</span>
+									<i class="success"></i>
+								</li>
+								<li class="stepbar-4" >
+									<span class="stepbar-current">3. 确认收货</span>
+									<i class="current"></i>
+								</li>
+								<li class="stepbar-4 stepbar-last" >
+									<span>4. 评价</span>
+								</li>
+							</ol>
+						</div>
+						<div id="orderDesc_0" class="order-orderDesc">
+							<h2 class="buy-th-title" style="border-bottom: 1px solid #5DB20E;">我已经收到货，同意付款</h2>
+						</div>
+						<div class="order-orderDesc">
+							<h2 class="" style="font-weight: 500;text-indent: 50px;margin-top:20px;">订单信息</h2>
+						</div>
+						<div id="J_CartMain" class="cart-main">
+						<div class="cart-table-th">
+							<div class="wp">
+								<div class="th th-item">
+									<div class="td-inner">商品信息</div>
+								</div>
+								<div class="th th-info">
+									<div class="td-inner">kong</div>
+								</div>
+								<div class="th th-price">
+									<div class="td-inner">单价</div>
+								</div>
+								<div class="th th-amount">
+									<div class="td-inner">数量</div>
+								</div>
+								<div class="th th-sum">
+									<div class="td-inner">金额</div>
+								</div>
+							</div>
+						</div>
+						<div class="" id="J_OrderList">
+							<div id="J_OrderHolder" style="height: auto;">
+								<div class="J_Order layui-clear order-body">
+									<div class="J_ItemHead shop layui-clear">
+										<div class="order-promo-info">
+											<div class="scrolling-container">
+												<ul class="scrolling-promo-hint J_ScrollingPromoHint" style="position: relative;top: 0px;">
+													<li class="ks-switchable-panel-internal151" style="display: block;"></li>
+													<li class="ks-switchable-panel-internal151" style="display: block;"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="order-content">
+										<div  class="item-list">
+											<div   class="bundle  bundle-last ">
+												<div  class="item-holder">
+													<div class="J_ItemBody item-body layui-clear item-normal  first-item ">
+														<ul class="item-content layui-clear ">
+															<li class="td td-item">
+																<div class="td-inner">
+																	<div class="item-pic J_ItemPic img-loaded" style="margin-left: 20px;">
+																		<a href="#" target="_blank" data-title="" class="J_MakePoint" data-point="tbcart.8.12" data-spm-anchor-id="a1z0d.6639537.1997196601.3">
+																			<img src="img/cabbage2.jpg" class="itempic J_ItemImg">
+																		</a>
+																	</div>
+																	<div class="item-info">
+																		<div class="item-basic-info">
+																			<a href="#" class="item-title J_MakePoint" target="_blank" title="">包菜</a>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-info"> 
+																<div class="item-props item-props-can">
+																	<p class="sku-line" tabindex="0">重量：500g</p>
+																	<span tabindex="0" class="btn-edit-sku J_BtnEditSKU J_MakePoint" data-point="tbcart.8.10">修改</span>
+																</div>
+															</li>
+															<li class="td td-price"> 
+																<div class="td-inner">
+																	<div class="item-price price-promo-">
+																		<div class="price-content">
+																			<div class="price-line">
+																				<em class="price-original">￥59.00</em>
+																			</div>
+																			<div class="price-line">
+																				<em class="J_Price price-now" tabindex="0">￥17.90</em>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-amount"> 
+																<div class="td-inner">
+																	<div class="amount-wrapper ">
+																		<div class="item-amount ">
+																			<input value="1" class="text text-amount J_ItemAmount" data-max="4579" data-now="1" autocomplete="off" type="text" style="border: 0px;">
+																		</div>
+																		<div class="amount-msg J_AmountMsg">
+																			
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-sum">
+																<div class="td-inner">
+																	<em tabindex="0" class="J_ItemSum number">￥81.60</em>
+																	<div class="J_ItemLottery"></div>
+																</div> 
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="order-payInfo">
+										<div class="payInfo-wrapper">
+											<div class="payInfo-shadow">
+												<div class='order-realPay'>
+													<div>
+														<span class="realPay-title">实付款：</span>
+														<span class="order-price">&#165;</span>
+														<span class="realPay-price">65.00</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="misc-info">
+										<div class="sep-row"></div>
+										<div class="info-list">
+											<span class="label">订单编号：</span>
+											<span class="order-num">145717496235180487</span>
+										</div>
+										<div class="info-list">
+											<span class="label">支付宝交易账号：</span>
+											<span class="order-num">2018040621001001110524853838</span>
+										</div>
+										<div class="info-list">
+											<span class="label">收货地址：</span>
+											<span class="buyer-address">
+											 	<span>重庆</span>
+											 	<span>重庆市</span>
+											 	<span>南岸区</span>
+											 	<span>花园路街道重庆市南岸区环湖路14号（聚丰花园）</span>，
+											 	<span>丽丽</span>，
+											   	<span>15123456789</span>，
+											    <span>400060</span>
+											 </span>
+										</div>
+										<div class="info-list">
+											<span class="label">成交时间：</span>
+											<span class="order-num">2018-04-06 23:39:18</span>
+										</div>
+									</div>
+									<div class="box order-dashboard">
+										<div id="pay-box" class="bd">
+											<ul>
+												<li class="alert-msg">请收到货后，再确认收货！否则您可能钱货两空！</li>
+											</ul>
+											<form id="authorizeOnceForm" class="ui-form" method="post">
+												<div class="ui-securitycore ui-securitycore-tip J-securitycoreTip " data-link-in-xbox="">
+													<div class="ui-form-item ui-form-item-success">
+												    	<div class="ui-form-explain"><i></i><span>安全设置检测成功！</span></div>
+												        <div class="J-checkResult fn-hide" data-status=""></div>
+												    </div>
+												</div>
+												<div class="ui-securitycore J-securitycoreMain">
+													<input style="display:none" >
+													<input style="display:none" type="password">
+													<div class="edit-section">
+														<div class="ui-form-item">
+															<label class="ui-label" for="payPassword">支付宝支付密码： </label>
+															<span id="payPassword_container" class="alieditContainer">
+																<input  value="3" name="payPassword_rsainput" class="ui-input" autocomplete="off" value="" maxlength="6" minlength="6" style="z-index: 100;" type="password">
+															</span>
+														</div>
+														<div class="ui-form-item"><input type="button" value="确定" class="btn"></div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer" style="top:0px">
+			<ul class="layui-clear">
+				<li>
+					<span>服务保证</span>
+					<ul>
+						<li>正品保证</li>
+						<li>绿色新鲜</li>
+						<li>按时送达</li>
+						<li>7&#215;15小时客户服务</li>
+					</ul>
+				</li>
+				<li>
+					<span>支付方式</span>
+					<ul>
+						<li>在线支付</li>
+						<li>货到付款</li>
+						<li>分期付款</li>
+						<li>转账付款</li>
+					</ul>
+				</li>
+				<li>
+					<span>商家服务</span>
+					<ul>
+						<li>商家入驻</li>
+						<li>广告服务</li>
+						<li>服务市场</li>
+						<li>培训中心</li>
+					</ul>
+				</li>
+				<li>
+					<span>物流配送</span>
+					<ul>
+						<li>免配送费</li>
+						<li>211限时达</li>
+						<li>专人配送</li>
+						<li>EMS</li>
+					</ul>
+				</li>
+				<li><div><img src="img/index/bg-code.png"></div></li>
+			</ul>
+			<div class="lg-footer J-loginLanguage">
+	    		<!--copyright start-->
+			    <div class="copyright">
+			        <p class="tag-line">
+			            Copyright &copy; 2017<script>
+			            	new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());
+			            </script> 
+			            <span>蒋中梅&nbsp;版权所有</span>
+			        </p>
+			    </div>
+			</div>
+		</footer>
+	</body>
+</html>

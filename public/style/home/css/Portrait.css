@@ -1,0 +1,115 @@
+.Portrait-list{
+	color: #fff;
+}
+
+
+/*客服*/
+.Portrait-ke{
+	position: fixed;
+	top: 200px;
+	bottom: 0;
+	right: 45px;
+	left: 800px;
+	border-left: 2px solid #d2524c;
+	box-sizing: border-box;
+	border-radius: 20px 20px 0 0;
+	overflow: hidden;
+	background: #fff;
+	z-index: 99;
+	display: none;
+}
+.PortraitK-title{
+	width: 100%;
+	height: 45px;
+	background: #d2524c;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+	font-size: 18px;
+	padding-left: 15%;
+	box-sizing: border-box;
+}
+.PortraitK-content{
+	width: 100%;
+	height: 370px;
+	background: #fff;
+	overflow-y: auto;
+}
+.PortraitK-bottom{
+	width: 100%;
+	background: #c9c9c9;
+	padding:10px 10px;
+	box-sizing: border-box;
+	
+}
+#porshuruk{
+	width: 85%;
+	border: none;
+	border: 1px solid rgba(0,0,0,0.1);
+	padding: 5px 10px;
+	box-sizing: border-box;
+	outline: none;
+	border-radius: 30px;
+}
+.porfasong{
+	border: none;
+	background: none;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	background: #d2524c;
+	letter-spacing: 2px;
+	border-radius: 20px;
+	margin-left: 15px;
+	outline: none;
+}
+
+.ma-ke{
+	padding: 20px;
+	box-sizing: border-box;
+	font-size: 12px;
+	position: relative;
+	clear: both;
+}
+.ma-ke>p{
+	color: #5eb7ea;
+
+}
+.ma-ke>p>span{
+	color: #818181;
+	margin-left: 20px;
+}
+.ma-keText{
+	margin-top: 25px;
+	margin-right: 100px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	background: #5eb7ea;
+	color: #fff;
+	border-radius: 10px;
+	word-break: break-all;
+}
+
+
+.my-keText{
+	margin-right: 0;
+}
+.admin-ke{
+	float: left;
+}
+.my-ke{
+	padding: 10px 20px 0 100px;
+	box-sizing: border-box;
+	text-align: right;
+	float: right;
+}
+
+.PortraitK-content::-webkit-scrollbar{
+	width: 5px;
+	
+}
+.fa-times{
+	float: right;
+	margin: 15px 20px;
+	cursor: pointer;
+}

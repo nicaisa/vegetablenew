@@ -1,0 +1,251 @@
+@charset "utf-8";
+html{font-family:'helvetica neue',PingFangSC-Light,arial,'hiragino sans gb','microsoft yahei ui','microsoft yahei',simsun,sans-serif;font-size:14px}
+body,button,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,hr,input,li,ol,p,td,textarea,th,ul{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+em,i{font-style:normal;font-weight:400}
+button,input,select,textarea{font-family:'helvetica neue',PingFangSC-Light,arial,'hiragino sans gb','microsoft yahei ui','microsoft yahei',simsun,sans-serif}
+button,select{box-sizing:border-box}
+button{border:none}
+button,input[type=submit],input[type=button],select{cursor:pointer}
+table{border-collapse:collapse;border-spacing:0}
+li{list-style:none}
+a{text-decoration:none}
+a img,fieldset,iframe,img{border-width:0;border-style:none}
+.qc-log-btn{background-color:#48A70F;border:none;color:#fff;border-radius:10px;outline:0;letter-spacing: 5px;}
+.qc-log-btn:hover{background-color:#3EA00F;}
+.qc-log-btn.disabled,
+.qc-log-btn.disabled:hover{background-color:#d0d0d0;color:#fff}
+/*输入框*/
+.qc-log-input-text{font-size:14px;height:45px;width:258px;display:inline-block;border:1px solid #ddd;border-radius:2px;color:#333;vertical-align:middle;padding:13px 10px 12px;box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none;line-height:1}
+.qc-log-input-text::-ms-clear{display:none}
+.qc-log-input-text:hover{border-color:#b3b3b3;outline:0}
+.qc-log-input-text:focus{border-color:#3EA00F;outline:0}
+.qc-log-input-text.disabled,
+.qc-log-input-text:disabled{background-color:#f0f1f2;color:#a2a2a2;background-image:none;cursor:default}
+.qc-log-input-text.disabled:focus,
+.qc-log-input-text.disabled:hover,
+.qc-log-input-text:disabled:focus,
+.qc-log-input-text:disabled:hover{border-color:#ddd}
+.qc-log-input-text-wrap.m .qc-log-input-text{font-size:12px;line-height:15px;height:15px}
+.qc-log-input-text.error,
+.qc-log-input-text.error:focus,
+.qc-log-input-text.error:hover{border-color:#e1504a}
+.fm-dropdown .input-tips,.form-input .input-tips
+{position:absolute;top:15px;left:12px;font-size:14px;line-height:16px;color:#999;cursor:text;display:none;text-align:left}
+:-ms-input-placeholder{color:#999}
+/*协议复选框*/
+.qc-log-checkbox{width:16px;height:16px;cursor:pointer;vertical-align:middle;outline:0;background:0 0\9;background-image:url(../img/regist.new.png);-webkit-appearance:none;background-position:0px -15px}
+.qc-log-checkbox:focus,.qc-log-checkbox:hover{background-image:url(../img/regist.new.png);background-position:-54px -51px}
+.qc-log-checkbox:checked{background-image:url(../img/regist.new.png);background-position:-31px 0px}
+.qc-log-checkbox:checked:hover{background-image:url(../img/regist.new.png);background-position:-49px 0px}
+.qc-log-checkbox:checked:focus{background-image:url(../img/regist.new.png);background-position:0px -33px}
+.qc-log-checkbox[disabled]{background-image:url(../img/regist.new.png);background-position:-18px -33px}
+.qc-log-checkbox[disabled]:checked{background-image:url(../img/regist.new.png);background-position:-36px -33px}
+.form-ctrl-label.disabled,.qc-log-checkbox-wrap.disabled,
+.qc-log-checkbox[disabled],.qc-log-checkbox[disabled]+label{cursor:default;cursor:not-allowed}
+.form-ctrl-label .qc-log-checkbox{vertical-align:-3px;margin-right:5px}
+.form-ctrl-label{cursor:pointer;vertical-align:middle;line-height:1}
+/*中国select*/
+.qc-log-select{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:1px solid #d1d2d3;border-radius:2px;background-color:#fff;background-image:url(img/select.png);background-repeat:no-repeat;background-position:right center;box-shadow:none;color:#333;font-size:14px;cursor:pointer;height:35px;padding:8px 24px 7px 6px;vertical-align:middle;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;min-width:60px}
+.qc-log-select::-ms-expand{display:none}
+.qc-log-select[disabled]{cursor:default;background-color:#f0f1f2;background-image:url(img/select-disabled.png);border-color:#d5d5d5;color:#a2a2a2}
+.m-loading{text-align:center}
+.m-loading .loading>div{display:inline-block;width:10px;height:10px;border-radius:100%;background-color:#fff;-webkit-animation:bouncedelay .7s infinite ease-in-out both;animation:bouncedelay .7s infinite ease-in-out both;text-align:center;margin-left:4px;margin-right:4px}
+.m-loading .loading .one{-webkit-animation-delay:-.32s;animation-delay:-.32s}
+.m-loading .loading .two{-webkit-animation-delay:-.16s;animation-delay:-.16s}
+@-webkit-keyframes bouncedelay{
+	0%,100%,80%{-webkit-transform:scale(.5);opacity:1}40%{-webkit-transform:scale(1);opacity:.8}}
+@keyframes bouncedelay{0%,100%,80%{-webkit-transform:scale(.5);transform:scale(.5);opacity:1}40%{transform:scale(1);-webkit-transform:scale(1);opacity:.8}}
+.tip-unit .tip-list{position:absolute;top:48px;left:0;width:100%;border:1px solid #ddd;background-color:#FFF;border-radius:2px;color:#000;font-size:14px;z-index:5;max-height:370px;overflow-y:auto;box-sizing:border-box}
+.tip-unit .tip-list li{margin-left:10px;margin-right:10px}
+.tip-unit .tip-list .tip-hover,
+.tip-unit .tip-list li:hover{background-color:#f2f2f2;cursor:pointer}
+.tip-unit .tip-list .tip{display:block;padding-left:10px;color:#666;line-height:38px;text-align:left}
+.tip-unit .tip-list .tip-hover .tip,
+.tip-unit .tip-list li:hover .tip{color:#333}
+
+.form-ctrl-label-wrap{margin-bottom:15px;text-align:left}
+.form-ctrl-label-wrap span{display:inline-block;vertical-align:top;color:#666;max-width:85%;line-height:1.4}
+.form-ctrl-label{margin-right:15px}
+.form-ctrl-label{font-size:14px;cursor:pointer;vertical-align:middle;line-height:1}
+
+.form-input .form-input-help{font-size:14px;line-height:1.5;margin-top:5px;color:#999;vertical-align:middle;text-align:left;-webkit-transition:max-height .5s ease-in-out;transition:max-height .5s ease-in-out;max-height:100px}
+.form-input .form-input-help.error{color:#e1504a}
+
+.fm-dropdown .mobile-code-dropdown .flag{display:inline-block;width:16px;height:11px;line-height:11px;vertical-align:baseline;margin:0 6px 0 0;text-decoration:inherit;speak:none;-webkit-font-smoothing:antialiased;-webkit-backface-visibility:hidden;backface-visibility:hidden;border:1px solid #d1d1d1}
+.fm-dropdown .mobile-code-dropdown .flag:not(.icon):before{display:inline-block;content:'';background:url(../img/flags.png) -108px -1976px no-repeat;width:16px;height:11px}
+.fm-dropdown .mobile-code-dropdown .flag.china:before,
+.fm-dropdown .mobile-code-dropdown .flag.cn:before{background-position:0 -1196px}
+/*底部*/
+.lg-footer{width:100%;text-align:center;padding-bottom:50px;margin-top:45px}
+.copyright{margin-top:15px}
+.copyright .tag-line,.copyright a{color:#999}
+.international .copyright span{display:none}
+
+body{width:100%;height:100%;background:#eee}
+.body{min-width:1000px}
+.form-input{vertical-align:top;padding-bottom:20px;position:relative}
+.regist-wrapper{position:relative;padding-top:44px;padding-bottom:40px}
+.regist-wrapper .link{color:#3EA00F;padding:0 5px}
+.regist-wrapper .link:hover{text-decoration:underline}
+.regist-wrapper .tag-line{font-size:14px;color:#666}
+.regist-header{text-align:center}
+.regist-header .logo{background-image:url(../img/index/logo.png);width:180px;height:63px;display:inline-block;background-repeat:no-repeat;background-size:100% 100%;}
+/*邮箱内容 start*/
+.regist-content{text-align:center;max-width:1180px;margin:40px auto 0;background-color:#fff;padding-bottom:40px}
+.regist-content .ct-inner{width:420px;margin:0 auto}
+.regist-content .login-tab{display:inline-block;background:#fff;margin-top:40px}
+.regist-content .tab .tab-list{padding-top:10px;height:88px;font-size:0;position:relative}
+.regist-content .tab .tab-list .tab-item{display:inline-block;width:50%;text-align:center;border-bottom:3px solid #d1d2d4}
+.regist-content .tab .tab-list .tab-item .tab{display:block;height:88px}
+.regist-content .tab .tab-list .tab-item .title{font-size:18px;color:#333;vertical-align:middle}
+.regist-content .tab .tab-list .tab-item .tab:before{display:inline-block;content:"";width:0;height:100%;vertical-align:middle;font-size:0}
+.regist-content .tab .tab-list .tab-item .icon{display:inline-block;vertical-align:middle;margin-right:10px;width:32px;height:32px;background-repeat:no-repeat;background-size:100% !important}
+.regist-content .tab .tab-list .tab-item .mail{background-image:url(img/icon-mail.svg)}
+.regist-content .tab .tab-list .tab-item .mobile{background-image:url(../img/icon-mobile.svg)}
+.regist-content .tab .tab-list .tab-item.selected{border-bottom:3px solid #00a2ff}
+.regist-content .tab .tab-list .tab-item.selected .title{color:#2277da}
+.regist-content .tab .tab-list .tab-item.selected .mail{background-image:url(../img/icon-mail-h.png)}
+.regist-content .tab .tab-list .tab-item.selected .mobile{background-image:url(img/icon-mobile-h.svg)}
+.regist-form{padding-top:40px}
+.regist-content .sp-line{text-align:center;height:20px;margin-bottom:20px}
+.regist-content .sp-line .line{display:inline-block;border-top:1px solid #d1d2d4;width:100%}
+.regist-content .sp-line .title{color:#999;font-size:14px;position:relative;top:-14px;background-color:#fff;padding-left:10px;padding-right:10px}
+.regist-content .sp-line .links{color:#2277da}
+.regist-content .sp-line .links:hover{text-decoration:underline}
+.regist-content .qc-log-input-text.lg{width:100%}
+.regist-content .qc-log-btn.lg{width:100%;height:45px;border:none;margin-bottom:20px;font-size:16px}
+.regist-content .qc-log-bubble{z-index:10}
+
+/*手机号码-中国*/
+.fm-dropdown{position:relative;border:1px solid #d1d2d3;border-radius:2px;text-align:left}
+.fm-dropdown.error{border:1px solid #e1504a}
+.fm-dropdown .mobile-code-dropdown{position:absolute;left:0;top:0;width:120px}
+.fm-dropdown .mobile-code-dropdown .dropdown-link{display:inline-block;height:45px;line-height:45px;vertical-align:top;width:100px;padding-left:10px;position:relative}
+.fm-dropdown .mobile-code-dropdown .dropdown-link:hover{cursor:pointer}
+.fm-dropdown .mobile-code-dropdown .dropdown-link .flag{vertical-align:middle}
+.fm-dropdown .mobile-code-dropdown .dropdown-link.disabled{cursor:default}
+.fm-dropdown .mobile-code-dropdown .arr{display:inline-block;width:12px;height:7px;background-image:url(../img/regist.new.png);position:absolute;right:5px;top:19px;background-position:-67px -36px}
+.fm-dropdown .mobile-code-dropdown.menu-active .arr{background-image:url(../img/regist.new.png);background-position:-49px -18px}
+.fm-dropdown .mobile-code-dropdown .mobile-code{vertical-align:middle;color:#333;margin-right:10px;width:40px;display:inline-block}
+.regist-content .qc-log-input-text.input-mobile{border:none}
+.mobile-code-dropdown .dropdown-wrapper{width:420px;border-radius:2px;border:1px solid #ddd;font-size:14px;background-color:#FFF;position:absolute;top:48px;left:-1px;box-sizing:border-box;z-index:5;color:#000;max-height:370px;overflow-y:auto;overflow-x:hidden}
+.mobile-code-dropdown .dropdown-menu{padding:10px 0;margin:0 10px;width:400px}
+.mobile-code-dropdown .dropdown-menu.dropdown-menu-usual{border-bottom:1px solid #f2f2f2}
+.mobile-code-dropdown .dropdown-menu .menu-hover,
+.mobile-code-dropdown .dropdown-menu li:hover{background-color:#f2f2f2;cursor:pointer}
+.mobile-code-dropdown .dropdown-menu .info{display:block;padding-left:10px;color:#666;line-height:38px;text-align:left}
+.mobile-code-dropdown .dropdown-menu .menu-hover .info,
+.mobile-code-dropdown .dropdown-menu li:hover .info{color:#333}
+.mobile-code-dropdown .dropdown-menu .mobile-code{float:right;width:50px;text-align:left}
+.fm-dropdown .qc-log-input-text.input-mobile{display:block;width:100%;padding-left:120px;border:none}
+.fm-dropdown .input-tips{z-index:1;left:120px}
+.m-mobile-code-dropdown{height:45px;border:none;display:none}
+/*验证码box*/
+.fm-verify{font-size:0}
+.fm-verify .qc-log-btn,
+.fm-verify .qc-log-input-text{width:47.6%;display:inline-block;vertical-align:top;font-size:14px}
+.fm-verify .qc-log-btn{background:#f4f4f4;border:1px solid #d1d2d4;margin-left:2.3%;height:45px;color:#333}
+.fm-verify .qc-log-input-text{margin-right:2.3%}
+.fm-verify .qc-log-btn:hover{background-color:#e8e8e8}
+.fm-verify .qc-log-btn.disabled,
+.fm-verify .qc-log-btn.disabled:hover{color:#999;background-color:#f4f4f4}
+
+.regist{margin-top:20px;text-align:center}
+/*邮箱内容*/
+.regist-content>.b-title{text-align:left;padding:45px 40px 0}
+.regist-content>.b-title h2{font-size:24px;color:#333;font-weight:400;padding-bottom:10px;border-bottom:1px solid #e7e7e7}
+.regist-content>.b-title .icon{display:inline-block;width:32px;height:32px;vertical-align:-8px;margin-right:10px;background-size:100% !important}
+.regist-content>.b-title .icon-mail{background-image:url(../img/register/icon-mail-h.png)}
+.regist-content>.b-title .icon-mobile{background-image:url(../img/register/icon-mobile-h.png)}
+/*邮箱激活页面*/
+.mail-activate .ct-inner{padding-left:40px;padding-right:40px;width:auto;font-size:14px;color:#666}
+.mail-activate p{line-height:30px}
+.mail-activate .activate-info{height:340px;border-bottom:1px solid #e7e7e7}
+.mail-activate .activate-info h2{font-size:24px;color:#2277da;font-weight:400;padding-top:100px;margin-bottom:30px}
+.mail-activate .activate-info h2 .icon-mail{display:inline-block;background-image:url(../img/icon-mail-h.png);width:32px;height:32px;vertical-align:-8px;margin-right:10px;background-size:100% !important}
+.mail-activate .activate-info .op-btn .qc-log-btn{width:220px;height:45px;border:none;margin-top:60px;font-size:16px}
+.mail-activate .supplementary-info{text-align:left;width:47.2%;margin:70px auto 0}
+.mail-activate .supplementary-info .info-list li{line-height:30px}
+
+.regist-content.mail{height:auto;padding-bottom:0}
+.mail .ct-inner{width:auto;font-size:14px;color:#666;padding:0}
+.mail .activate-info{padding-top:60px;padding-bottom:60px}
+.mail .activate-info h2{font-size:24px;color:#2277da;font-weight:400;margin-bottom:20px}
+.mail .activate-info h2 .icon{display:inline-block;width:32px;height:32px;vertical-align:text-bottom;margin-right:10px;background-repeat:no-repeat}
+.mail .activate-info h2 .icon-complete{background-image:url(img/icon-complete.svg);vertical-align:-8px;background-size:cover}
+.mail .activate-info .op-btn{padding-top:50px}
+.mail .activate-info .op-btn .qc-log-btn{width:220px;height:45px;border:none}
+.mail .activate-info .op-btn p{margin-top:15px}
+
+
+
+.consult-select-list-item{position:relative}
+.consult-select-list-item+.consult-select-list-item{margin-top:45px}
+.consult-select-details{font-size:14px;line-height:1.5;color:#999;vertical-align:top;min-height:48px;position:relative;padding-left:68px;padding-right:140px}
+.consult-select-details:before{content:"";position:absolute;width:48px;height:48px;left:0;top:0}
+.consult-select-details.consult-select-details-qq:before{background-image:url(img/icon-consult-qq.svg);background-size:100%}
+.consult-select-details.consult-select-details-phone:before{background-image:url(img/icon-consult-phone.svg);background-size:100%}
+.consult-select-title{font-size:18px;font-weight:400;color:#333;margin-bottom:3px;display:block}
+
+.newuser-dnspod.regist-content{padding-top:20px}
+.b-title{overflow:hidden}
+/*右上方其他方式登录*/
+.regist-last-txt{float:right;padding-top:10px}
+.regist-last-txt a{color:#2277da}
+.regist-last-txt a:hover{text-decoration:underline}
+
+@media all and (max-width:768px){
+	.form-ctrl-label-wrap span{max-width:90%}
+}
+@media screen and (max-width:560px){
+	.copyright{margin-left:20px;margin-right:20px;line-height:1.8;font-size:12px}
+	.copyright span{display:inline-block}
+	.regist-content .sp-line .title{top:-15px}}
+@media screen and (max-width:768px){.body{min-width:320px}
+	
+	.regist-header .logo{width:210px;height:56px;background-size:cover}
+	.regist-content{min-width:89.6%;margin-left:5.2%;margin-right:5.2%;margin-top:25px;border:1px solid #dfe3e8;-webkit-box-shadow:0 1px 5px rgba(0,0,0,.1);box-shadow:0 1px 5px rgba(0,0,0,.1)}
+	.fm-dropdown .mobile-code-dropdown{display:none}
+	.fm-dropdown .input-tips{left:100px}
+	.m-mobile-code-dropdown{position:absolute;left:0;top:0;width:100px;display:block}
+	span.m-mobile-code-dropdown{display:inline-block;line-height:45px;padding-left:10px;width:90px}
+	.fm-dropdown .qc-log-input-text.input-mobile{padding-left:100px}
+	.mail-activate .supplementary-info{width:80%;margin-top:25px}
+	.switch .cn,.switch .en{font-size:16px}
+	.switch .cn.current:before,
+	.switch .en.current:after{display:none}
+	.mail-activate .activate-info h2{font-size:20px}
+	.mail-activate.regist-content{height:auto;background-color:transparent;box-shadow:none;border:none}
+	.mail-activate.regist-content .ct-inner{padding-left:0;padding-right:0}
+	.mail-activate .activate-info p{padding-left:3%;padding-right:3%}
+	.mail-activate .activate-info .op-btn .qc-log-btn{width:94%;font-size:16px}
+	.mail-activate .activate-info{border-bottom:none;background-color:#fff;border:1px solid #dfe3e8;-webkit-box-shadow:0 1px 5px rgba(0,0,0,.1);box-shadow:0 1px 5px rgba(0,0,0,.1);height:auto;padding-bottom:70px}
+	.mail-activate.regist-content .ct-inner{width:auto}
+	.mail .activate-info{padding:40px 3%}
+}
+@media screen and (max-width:560px){
+	.qc-unit-sm-1-1{width:100%}
+	.regist-header .logo{width:140px;height:37.3px}
+	.regist-content>.b-title{padding-left:0;padding-right:0;width:88%;margin:0 auto -20px}
+	.regist-content .ct-inner{width:88%}
+	.regist-content .tab .tab-list .tab-item .title{font-size:14px}
+	.regist-content .tab .tab-list .tab-item .icon,
+	.regist-content .tab .tab-list .tab-item.selected .mail,
+	.regist-content .tab .tab-list .tab-item.selected .mobile{width:24px;height:24px;background-size:cover}
+	.mail .ct-inner{width:auto}.mail .activate-info{padding-top:30px;padding-bottom:30px}
+	.mail .activate-info h2{font-size:20px}
+	.mail .activate-info h2 .icon{width:30px;height:30px;background-size:cover}
+	.mail .activate-info p{line-height:1.9}
+	.consult-select-list-item{position:relative}
+	.consult-select-list-item+.consult-select-list-item{margin-top:0;border-top:1px solid #ebeff2}
+	.consult-select-details{font-size:14px;line-height:1.5;min-height:0;padding:22px 40px 22px 15px}
+	.consult-select-details:before{display:none}
+	.consult-select-title{font-size:14px;line-height:1;margin-bottom:6px}
+}
+@media screen and (max-width:768px){
+	.newuser-dnspod-gift-box.regist-header .logo{width:180px;height:48px;background-size:cover}
+}
+@media screen and (max-width:560px){.newuser-dnspod-gift-box.regist-header .logo{width:91px;height:24px}
+}
+@media screen and (max-width:768px){.has-aside .tab-aside,.regist-last-txt{display:none}}

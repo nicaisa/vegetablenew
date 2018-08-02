@@ -1,0 +1,46 @@
+.about_box{
+	width: 1200px;
+	height: auto;
+	margin: auto;
+}
+.about_box>div::after{
+	display: block;
+	width: 100%;
+	content: "";
+	clear: both;
+}
+.about_title{
+	width: 100px;
+	text-align: center;
+	text-align: center;
+	margin: auto;
+}
+.text{
+	width: 1200px;
+	height: auto;
+	line-height: 30px;
+	margin-top: 20px;
+	
+}
+.about_title1{
+	color: #D2524C;
+}
+.about_title2{
+	font-size: 14px;
+}
+.Storefronts{
+	width: 100%;
+	height: 350px;
+	margin-top: 50px;
+}
+.Storefront1,.Storefront2,.Storefront3,.Storefront4{
+	width: 340px;
+	height: 230px;
+}
+.Storefront1{
+	float: left;
+}
+.Storefront2{
+	float: right;
+	right: 0;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>用户中心-收货地址-生鲜网</title>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/index.css" media="all" />
+		<link rel="stylesheet" href="css/plulic.css" media="all" >
+		<link rel="stylesheet" href="css/userInfo.css" media="all" >
+		<link rel="stylesheet" href="css/city-picker.css"  media="all"/><!--地址联动样式-->
+		<link href='img/index/logo.png' rel='icon' type='image/x-icon'/>
+	</head>
+	<body>
+		<nav>
+				<ul class="layui-nav layui-row">
+					<!--<li class="layui-nav-item">
+				    	<a href="">控制台<span class="layui-badge">9</span></a>
+				  	</li>-->
+				  	<li class="layui-nav-item layui-col-xs2 layui-col-sm2 layui-col-md1">
+				    	<a href="">请登录</a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs1 layui-col-sm1 layui-col-md1">
+				    	<a href="">注册</a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs3 layui-col-sm1 layui-col-md4" style="display: none;">
+				    	<a href="">个人中心<span class="layui-badge-dot"></span></a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs2 layui-col-sm1 layui-col-md1" style="display: none;">
+				    	<a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+				    	<dl class="layui-nav-child">
+				      		<dd><a href="javascript:;">我的信息</a></dd>
+				      		<dd><a href="javascript:;">修改信息</a></dd>
+				      		<dd><a href="javascript:;">退出</a></dd>
+				    	</dl>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs3 layui-col-sm3 layui-col-md1" style="margin-right: 0px;" >
+				    	<a href=""><img src="img/index/icon-shop-cart.png" class="layui-nav-img" >购物车<span class="layui-badge" >119</span></a>
+				    </li>
+				    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1" >
+				    	<a href=""><img src="img/index/icon-order.png" class="layui-nav-img">我的订单</a>
+				  	</li>
+				    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1">
+				    	<a href=""><img src="img/index/icon-fen.png" class="layui-nav-img">网站导航</a>
+				    	<dl class="layui-nav-child" style="text-indent: 10px;">
+				      		<dd><a href="javascript:;">蔬菜类</a></dd>
+				      		<dd><a href="javascript:;">水果类</a></dd>
+				      		<dd><a href="javascript:;">副食类</a></dd>
+				      		<dd><a href="javascript:;">肉类</a></dd>
+				      		<dd><a href="javascript:;">调料类</a></dd>
+				    	</dl>
+				    </li>
+				</ul>
+			</nav>
+		<section>
+			
+			<div class="user_center_main">
+				<!--  用户信息框分为 左边右边  -->
+				<div class="user_center_main_box layui-clear">
+					<!-- 左边  -->
+					<div class="user_center_left">
+						<p class="menu_tit">账号信息</p>
+						<ul class="menu_group ">
+							<li class="menu_group_list "><a href="userInfo.html"><i class="my-info"></i>我的资料</a></li>
+							<li class="menu_group_list"><a href="collect.html"><i class="my-collection" class="#"></i>我的收藏</a></li>
+							<li class="menu_group_list"><a href="shopcard.html"><i class="my-card"></i>我的购物车</a></li>
+						</ul>
+						<p class="menu_tit">账号记录</p>
+						<ul class="menu_group ">
+							<li class="menu_group_list"><a><i class="my-order"></i>我的订单</a></li>
+							<li class="menu_group_list"><a><i class="my-integral"></i>我的积分</a></li>
+							<li class="menu_group_list"><a  class="hover"><i class="my-address"></i>收货地址</a></li>
+						</ul>
+						<p class="menu_tit">账号安全</p>
+						<ul class="menu_group ">
+							<li class="menu_group_list"><a><i class="my-pwd"></i>修改密码</a></li>
+						</ul>
+					</div>
+					<!-- 右边  我的资料 -->
+					<div class="user_center_right">
+						<div class="user_mian_bar">
+							<p class="user_mian_bar_tit "><span>收货地址</span></p>
+							<div class="form-box">
+								<div></div>
+								<div class='item item-title '>
+									<span class="item-label tsl">新增收货地址</span>
+									<i></i>
+								</div>
+								<form class="layui-form" action="">
+									<div class="layui-form-item" data-info="所在地区">
+										<label class="layui-form-label">所在地区<i>*</i></label>
+								    	<div class="layui-input-block"><!--data-toggle="city-picker" -->
+								    		<input id="city-picker" class="cityPicker" size="70" data-toggle="city-picker"  name="title" lay-verify="title"  autocomplete="off" placeholder="点击从下拉面板中选择省/市/区/县" class="layui-input" type="text" value="重庆/南岸区/内环以内" data-value="">
+								    		<!--<input id="set" type="button" value="重置" class="layui-btn layui-btn-normal">-->
+								    	</div>
+									</div>
+									<div class="layui-form-item layui-form-text" data-info="详细地址">
+									    <label class="layui-form-label">详细地址<i>*</i></label>
+									    <div class="layui-input-block">
+									    	<textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+									    </div>
+									</div>
+									<div class="layui-form-item" data-info="收货人">
+									    <label class="layui-form-label">收货人姓名<i>*</i></label>
+									    <div class="layui-input-block">
+									    	<input name="title" lay-verify="title" autocomplete="off" placeholder="长度不超过25个字符" class="layui-input" type="text">
+									    </div>
+									</div>
+									<div class="layui-inline" data-info="手机">
+								      	<label class="layui-form-label">手机号码<i>*</i></label>
+								      	<div class="layui-input-inline">
+								      		<input name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input" type="tel">
+								      	</div>
+								    </div>
+								    <div class="layui-inline set-default-address">
+								    	<img src="img/checkbox_false.png" >
+								    	<label class="layui-form-label" >设置为默认收货地址</label>
+								    </div>
+								    <div  class="form-item set"><button class="btn">保存</button></div>
+								</form>
+							</div>
+							<div class="deliver-address">
+								<div class="caption mtb10">已保存了7条地址，还能保存13条地址</div>
+								<table class="layui-table" lay-skin="line">
+									<colgroup>
+								    	<col width="100">
+								    	<col width="150">
+								    	<col width="200">
+								    	<col width="80">
+								    	<col width="200">
+								  	</colgroup>
+								  	<thead>
+								    	<tr>
+									      	<th>收货人</th>
+									      	<th>所在地区</th>
+									      	<th>详细地址</th>
+									      	<th>手机</th>
+									      	<th>操作</th>
+								    	</tr> 
+								  	</thead>
+								  	<tbody>
+									    <tr>
+									      	<td>孟子</td>
+									      	<td> 重庆市 南岸区 花园路街道 </td>
+									      	<td>重庆市南岸区环湖路14号（聚丰花园）</td>
+									      	<td>15*******59 </td>
+									      	<td>
+									      		<div class="btn-box">
+									      			<button class="layui-btn layui-btn-xs modify"><i class="layui-icon"></i></button>
+	    											<button class="layui-btn layui-btn-xs layui-btn-danger delete"><i class="layui-icon"></i></button> 
+									      		</div>
+									      		<span class="note">默认地址</span>
+									      	</td>
+									    </tr>
+									    <tr>
+									      	<td>丽丽</td>
+									      	<td> 重庆市 南岸区 花园路街道 </td>
+									      	<td>重庆市南岸区环湖路14号（聚丰花园）</td>
+									      	<td>15*******59 </td>
+									      	<td>
+									      		<div class="btn-box">
+									      			<button class="layui-btn layui-btn-xs modify"><i class="layui-icon"></i></button>
+	    											<button class="layui-btn layui-btn-xs layui-btn-danger delete"><i class="layui-icon"></i></button> 
+									      		</div>
+									      		<span class="note implicit">设为默认</span>
+									      	</td>
+									    </tr>
+								  	</tbody>
+							</table>   
+         
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<section></section>
+		<script type="text/javascript" src="layui/layui.js" ></script>
+		<!--<script type="text/javascript" src="js/public/jquery-1.9.1.min.js" ></script>-->
+		<script type="text/javascript" src="js/address/jquery.min.js"></script>
+		<script type="text/javascript" src="js/public/base.js"></script><!--小广告-->
+		<script type="text/javascript" src="js/address/city-picker.data.js"></script>
+		<script type="text/javascript" src="js/address/city-picker.js"></script>
+		<script type="text/javascript"  src="js/userInfo.js"></script>
+	</body>
+</html>

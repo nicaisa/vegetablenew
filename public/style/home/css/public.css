@@ -1,0 +1,888 @@
+/*公共样式*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+li, ol, ul {
+	list-style: none;
+}
+body, button, input, select, textarea {
+	font: 12px/1.5 tahoma,arial,"\5b8b\4f53";
+	font-family: tahoma, arial, "宋体";
+	font-size: 12px !important;
+}
+button, h1, h2, h3, h4, h5, h6, input, select, textarea {
+	font-size: 100%;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, legend, button, input, textarea, th, td {
+	margin: 0;
+	padding: 0;
+}
+body {
+	overflow-x: hidden;
+	width: 100%;
+	background: url(../img/index/bg-body.jpg);
+}
+ul, ol, li {
+	list-style: none;
+}
+a {
+	outline: 0;
+	text-decoration: none;
+	color: #000;
+}
+var{
+	font-style: normal;
+}
+section{
+	/*margin: 0px auto;*/
+	/*width: 1000px;*/
+	display: flex;
+	align-items: center;/****水平居中****/
+	justify-content: center;/*垂直居中*/
+}
+html,body,footer{
+	width: 100%;
+	height: 100%;
+}
+nav{
+	width: 100%;
+	/*position:fixed;
+	top:0px;
+	z-index: 1000;*/
+}
+img {
+	border: 0;
+	vertical-align: top;
+}
+/*导航开始*/
+/*头部导航*/
+.layui-nav{
+	background: url(../img/index/icons.png) repeat 0px -72px;
+}
+.layui-nav .layui-nav-item{
+	line-height: 0.64rem;
+}
+.layui-nav .layui-badge-dot {
+	margin-top: -4px;
+}
+.layui-nav .layui-badge{
+	top:25%;
+	border-radius: 0.28rem;
+	height: 0.28rem;
+	line-height: 0.28rem;
+	font-size: 0.17rem;
+	padding:0px;
+}
+
+.layui-nav .layui-nav-item{
+	/*margin: 0px 20px;*/
+}
+.layui-nav .layui-nav-item a {
+	padding: 0rem;
+	font-size: 0.2rem;
+}
+.layui-nav .my a>var{
+	/* position: relative;
+     display: block;
+     width: 50%;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;*/
+}
+.layui-nav .my a>img,.layui-nav .my-order a>img,.layui-nav .net-nav a>img{
+	margin: 0px 0.1rem 0px 0.15rem;
+	width: 0.24rem;
+	height: 0.24rem;
+}
+.layui-nav .my a>span{
+	margin: -4px 3px 0;
+}
+.layui-nav .layui-nav-item:hover{
+	border: 0px !important;
+	background:none !important;
+}
+.layui-nav .my dd>a:hover, .layui-nav .net-nav dd>a:hover{
+	background: #30940E;
+	color:#fff;
+}
+@media screen and (min-width: 100px) and (max-width: 640px) {
+	.layui-nav .my dl, .layui-nav .net-nav dl{
+		top:0.7rem;
+	}
+	.layui-nav .my dl>dd,.layui-nav .net-nav dl>dd{
+		line-height: 0.6rem;
+	}
+}
+@media screen and (min-width:768px ) {
+	.layui-nav .layui-badge{
+		border-radius: 20px;
+		height: 20px;
+		line-height: 20px;
+		font-size: 10px;
+		min-width: 20px;
+	}
+	.layui-nav .layui-nav-item>a {
+		font-size: 14px;
+	}
+	.layui-nav .my a>img,.layui-nav .my-card a>img,.layui-nav .my-order a>img,.layui-nav .my-collect a>img{
+		margin: 0.15rem 5px 0px 10px;
+		width: 16px;
+		height: 16px;
+	}
+	.layui-nav .layui-nav-item{
+		line-height: 44px;
+	}
+	.layui-nav .my-card,.layui-nav .my-order,.layui-nav .my-collect{
+		width: 110px;
+	}
+	.layui-nav .my{
+		display: block;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+	}
+	.layui-nav .login{
+		margin-left: 8%;
+	}
+	.layui-nav .my-card{
+		margin-left: 32%;
+	}
+	.layui-nav .my dd>a, .layui-nav .net-nav dd>a{
+		font-size: 12px;
+		top:10px;
+	}
+	.layui-nav .my dl,.layui-nav .net-nav dl{
+		top:54px;
+	}
+	.layui-nav .my dl>dd:nth-of-type(1),.layui-nav .net-nav dl>dd:nth-of-type(1){
+		padding-top:0px;
+	}
+	.layui-nav .my>dl>dd:nth-of-type(3),.layui-nav .net-nav>dl>dd:nth-of-type(5){
+		padding-bottom: 0px;
+	}
+}
+/*导航结束*/
+/*底部开始*/
+footer{
+	height: 288px;
+	width: 100%;
+	border: 0;
+	background: url(../img/index/bg-footer.jpg);
+	background-size: 100% 100%;
+	position:relative;
+	top:50px;
+	bottom:0px;
+	left:0px;
+	color: rgb(150, 150, 150);
+}
+
+.footer>ul:nth-of-type(1){
+	background: none;
+	border-color: transparent;
+	table-layout: fixed;
+	padding: 0;
+	border-spacing: 0;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.footer>ul:nth-of-type(1)>li{
+	flex: 1;
+	cursor: move;
+	margin-top:50px;
+}
+.footer>ul:nth-of-type(1)>li:last-child{
+	cursor:default;
+}
+.footer>ul:nth-of-type(1)>li>span{
+	display: block;
+}
+.footer>ul:nth-of-type(1)>li>span:nth-of-type(1){
+	font-size: 20px;
+	position: relative;
+	top: 10px;
+	bottom: 10px;
+	font-family: '幼圆';
+	text-align: center;
+}
+.footer>ul:nth-of-type(1)>li>span:nth-of-type(2){
+	font-size: 12px;
+	word-break: normal;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	line-height: 12px;
+	position: relative;
+	left:28%;
+	right: 12%;
+	width: 60%;
+}
+.footer>ul:nth-of-type(1)>li>ul{
+	font-size: 12px;
+	word-break: normal;
+	line-height: 25px;
+	position: relative;
+	text-align: center;
+	top:20px;
+}
+.footer>ul:nth-of-type(1)>li>ul>li:nth-of-type(1){
+	top:10px;
+}
+.footer>ul:nth-of-type(1)>li:last-child div{
+	display: inline-block;
+	background-color: #ffffff;
+	border: 1px solid #e5e5e5;
+	padding: 5px;
+	text-align: center;
+	overflow-x: hidden;
+}
+.footer>ul:nth-of-type(1)>li:last-child div>img{
+	background-size:100% 100% ;
+	vertical-align: top;
+}
+.footer>div{
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	top:75px;
+}
+.footer>div>p{
+	font-family: '微软雅黑';
+	font-size: 15px;
+}
+@media only screen and (max-width:1325px ) {
+	.footer > ul > li > span:nth-of-type(2){
+		left: 25%;
+		right: 0%;
+		width: 75%;
+	}
+}
+@media only screen and (min-width:1326px) and (max-width:1450px) {
+	.footer > ul > li > span:nth-of-type(2){
+		left: 16%;
+		right: 0%;
+	}
+}
+@media only screen and (min-width:1656px) and (max-width:1756px) {
+	.footer > ul > li > span:nth-of-type(2){
+		left: 40%;
+		right: 0%;
+	}
+}
+@media only screen and (min-width:1757px) and (max-width:1890px) {
+	.footer > ul > li > span:nth-of-type(2){
+		left: -15%;
+		right: 0%;
+		width: 100%;
+		line-height: 25px;
+	}
+}
+@media only screen and (min-width:1891px) and (max-width:1920px) {
+	.footer > ul > li > span:nth-of-type(2){
+		left: -12%;
+		right: 0%;
+		width: 100%;
+		line-height: 25px;
+	}
+}
+/*底部结束*/
+/*小广告的标题背景颜色*/
+body .layui-layer-molv .layui-layer-title{background: #30940E;}
+
+/*忘记密码页面*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	margin: 0;
+	padding: 0;
+}
+input, select, textarea {
+	font-size: 100%;
+}
+body, button, input, select, textarea {
+	font: 12px/1.5 "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+form {
+	display: block;
+}
+.forget-password a:hover,.forget-password a:visited {
+	color: #30940E;
+	text-decoration: underline;
+}
+.forget-password #header {
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px solid #e3e3e3;
+	background-color: #f0f0f0;
+}
+.forget-password .header-layout {
+	width: 990px;
+	margin: 0 auto;
+	padding: 30px 0;
+	overflow: hidden;
+}
+.forget-password #logo a {
+	float: left;
+	display: inline-block;
+	height: 40px;
+	width: 178px;
+	overflow: hidden;
+	text-indent: -999em;
+}
+.forget-password #logo {
+	background: url(../img/index/logo.png) no-repeat;
+	background-size: 100% 100%;
+}
+.forget-password .header-layout .logo {
+	float: left;
+	display: inline-block;
+	height: 50px;
+}
+.forget-password h2 {
+	display: block;
+	font-size: 1.5em;
+	-webkit-margin-before: 0.83em;
+	-webkit-margin-after: 0.83em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	font-weight: 500;
+}
+.forget-password .header-layout .logo-title {
+	float: left;
+	display: inline-block;
+	width: auto;
+	height: 30px;
+	padding: 5px 0 0 10px;
+	line-height: 40px;
+	font-size: 24px;
+	color: #303030;
+}
+.forget-password  .header-nav {
+	width: auto;
+	height: 14px;
+	float: right;
+	line-height: 14px;
+	margin-top: 12px;
+}
+.forget-password ul,.forget-password menu,.forget-password dir {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+}
+.forget-password .header-nav {
+	width: auto;
+	height: 14px;
+	float: right;
+	line-height: 14px;
+	margin-top: 12px;
+}
+.forget-password .header-nav li {
+	float: left;
+	padding: 0 0 0 15px;
+	margin-right: 15px;
+	border-left: 1px solid #6c6c6c;
+}
+.forget-password .header-nav li.nav-first {
+	border-left: 0;
+}
+.forget-password .header-nav li a {
+	color: #6c6c6c;
+}
+.forget-password #content {
+	width: 100%;
+	min-height: 500px;
+	border-top: 1px solid #fff;
+}
+.forget-password .content-layout {
+	margin: 0 auto;
+	padding: 30px 0;
+	width: 990px;
+	height: auto;
+}
+.forget-password .maincenter {
+	margin: 0 auto;
+	width: 774px;
+	height: auto;
+}
+.forget-password .maincenter-box {
+	padding: 20px 0;
+	background-color: #fff;
+}
+.forget-password .maincenter-box-tip {
+	padding-bottom: 10px;
+}
+.forget-password p {
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+.forget-password .ui-tiptext {
+	margin: 0;
+	color: #6c6c6c;
+	position: relative;
+	font-size: 12px;
+	zoom: 1;
+}
+body.forget-password .ft-14 {
+	font-size: 14px;
+}
+.forget-password .iconfont {
+	font-family: rei;
+	font-style: normal;
+	cursor: default;
+	-webkit-font-smoothing: antialiased;
+}
+.forget-password .ui-tiptext-icon {
+	display: inline-block;
+	background: url(../img/icon-tishi-fogetpwd.png);
+	background-size:100% 100% ;
+	width:1em;
+	height: 1em;
+	vertical-align: middle;
+}
+.forget-password .ui-tiptext .iconfont {
+	font-size: 1.33em;
+	line-height: 1em;
+	text-shadow: 0 1px 0 #fff;
+	position: relative;
+	margin-right: 2px;
+}
+.forget-password .ui-tiptext .iconfont,.forget-password .ui-form-item .iconfont {
+	font-size: 1.33em;
+	line-height: 1em;
+	text-shadow: 0 1px 0 #fff;
+	position: relative;
+	margin-right: 2px;
+}
+.forget-password .ui-tiptext-message .ui-tiptext-icon {
+	color: #68b5e2;
+}
+/*from*/
+.forget-password .maincenter .ui-form {
+	margin-top: 30px;
+	color: #6c6c6c;
+}
+.forget-password .ui-form, .ui-form * {
+	list-style: none;
+}
+.forget-password .ui-form {
+	font-size: 12px;
+	line-height: 1.5;
+}
+.forget-password .ui-form,.forget-password .ui-form * {
+	list-style: none;
+}
+.forget-password .ui-form-item {
+	padding: 0 5px 20px 190px;
+	zoom: 1;
+}
+.forget-password .ui-label {
+	float: left;
+	width: 210px;
+	margin-left: -220px;
+	padding-top: 5px;
+	text-align: right;
+	font-size: 14px;
+}
+.ui-input {
+	width: 200px;
+	padding: 7px 9px;
+	height: 14px;
+	line-height: 14px;
+	border: 1px solid #ccc;
+	border-top-color: #a6a6a6;
+}
+.ui-input-checkcode {
+	width: 90px;
+	float: left;
+}
+.forget-password .ui-input {
+	width: 190px;
+	padding: 8px 9px;
+	line-height: 18px;
+	border: 1px solid #ddd;
+	color: #595959;
+	font-size: 12px;
+}
+.forget-password .ui-form-item .ui-input {
+	font-size: 12px;
+	color: #6C6C6C;
+	vertical-align: middle;
+}
+.forget-password .ui-form-other {
+	margin-left: 4px;
+}
+.forget-password .ui-form-explain {
+	margin: 0;
+	font-size: 12px;
+	color: #B2B2B2;
+	margin-top: 10px;
+}
+.forget-password .ui-form-item:after {
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.forget-password .ui-button {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 700;
+	border-radius: 2px;
+	padding: 0 20px;
+	background-image: none;
+}
+.forget-password .ui-button-lorange,.forget-password .ui-button-morange,.forget-password .ui-button-sorange {
+	color: #fff;
+	border: 1px solid #30940E;
+	background-color: #30940E;
+	border-radius: 10px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	letter-spacing: 5px;
+}
+
+/*验证身份页面*/
+.authenticate .ui-step {
+	padding: 0 40px;
+	margin: 0 auto;
+	font-size: 14px;
+	list-style: none;
+	zoom: 1;
+	position: relative;
+	color: #b7b7b7;
+	overflow: hidden;
+}
+.authenticate .ui-step .ui-step-active {
+	color: #30940E;
+}
+.authenticate li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+.authenticate .ui-step-3 li {
+	width: 50%;
+}
+.authenticate .ui-step {
+	padding: 0 40px;
+	margin: 0 auto;
+	font-size: 14px;
+	list-style: none;
+	zoom: 1;
+	position: relative;
+	color: #b7b7b7;
+	overflow: hidden;
+}
+.authenticate .ui-step li {
+	float: left;
+	height: 54px;
+	margin: 0;
+	width: 50%;
+	position: relative;
+}
+.ui-step .ui-step-active {
+	color: #30940E;
+}
+.ui-step li .ui-step-line {
+	height: 3px;
+	background: #b9b9b9;
+	display: block;
+	margin-top: 14px;
+	line-height: 1;
+	overflow: hidden;
+}
+.ui-step li .ui-step-icon {
+	height: 50px;
+	position: absolute;
+	top: 0;
+	width: 150px;
+	text-align: center;
+	left: -25px;
+	font-family: tahoma;
+}
+.ui-step-icon .iconfont {
+	font-size: 30px;
+	margin: 0;
+	color: #b7b7b7;
+	color: rgba(0,0,0,.25);
+	line-height: 30px;
+	background: #fff;
+	padding: 0 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-shadow: 1px 1px 2px #fff, 0 0 0 #ccc, 1px 1px 2px #fff;
+}
+.ui-step .iconfont {
+	color: #30940E;
+	background: url(../img/icon-lingxing-false.png) no-repeat;
+	background-size:100% 100% ;
+	width: 30px;
+	height: 30px;
+}
+.ui-step .ui-step-active .iconfont.active{
+	background: url(../img/icon-lingxing-true.png) no-repeat;
+	background-size:100% 100% ;
+}
+.ui-step-icon .ui-step-number {
+	line-height: 14px;
+	font-style: normal;
+	position: absolute;
+	top: 7px;
+	left: 0;
+	padding: 0 20px;
+	font-weight: 700;
+	color: #fff;
+}
+.ui-step .ui-step-active i.ui-step-number {
+	color: #FFF;
+}
+.ui-step li .ui-step-icon {
+	height: 50px;
+	position: absolute;
+	top: 0;
+	width: 150px;
+	text-align: center;
+	left: -25px;
+	font-family: tahoma;
+}
+.ui-step-icon .ui-step-text {
+	height: 20px;
+	line-height: 20px;
+	position: relative;
+	text-shadow: 0 1px 0 #fff;
+	top: 34px;
+	left: -50px;
+}
+.ui-step li .ui-step-line {
+	height: 3px;
+	background: #b9b9b9;
+	display: block;
+	margin-top: 14px;
+	line-height: 1;
+	overflow: hidden;
+}
+.ui-step:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+.ui-step li.ui-step-end {
+	position: absolute;
+	top: 0;
+	right: -110px;
+	width: 150px;
+	zoom: 1;
+	_clear: both;
+}
+.ui-form-item .ui-input {
+	font-size: 12px;
+	*font-size: 11px;
+	_font-size: 12px;
+	color: #595959;
+	vertical-align: middle;
+}
+.ui-form .fn-hide {
+	display: none;
+}
+.ui-form-other-link {
+	display: block;
+}
+.ui-form .fn-hide {
+	display: none;
+}
+.ui-poptip-blue .ui-poptip-shadow {
+	background-color: rgba(0,0,0,.05);
+	/*FILTER: progid:DXImageTransform . Microsoft . Gradient(startColorstr=#0c000000, endColorstr=#0c000000);*/
+}
+.ui-poptip-blue .ui-poptip-container {
+	background-color: #F8FCFF;
+	border: 1px solid #B9C8D3;
+}
+.ui-poptip-shadow .ui-poptip-container {
+	position: relative;
+	background-color: #FFFCEF;
+	border: 1px solid #ffbb76;
+	border-radius: 2px;
+	padding: 5px 22px 5px 10px;
+	zoom: 1;
+	height: 100%;
+}
+.ui-poptip-blue {
+	color: #4d4d4d;
+}
+.ui-poptip {
+	color: #30940E;
+	line-height: 1.5;
+}
+.ui-poptip-arrow-7 {
+	left: 14px;
+	bottom: 11px;
+}
+.ui-poptip-arrow {
+	position: absolute;
+	font-size: 14px;
+	font-family: SimSun,Hiragino Sans GB;
+	font-style: normal;
+	line-height: 21px;
+	z-index: 10;
+}
+.ui-poptip-blue {
+	color: #4d4d4d;
+}
+em {
+	font-style: normal;
+	font-weight: 500;
+}
+.ui-poptip-arrow em {
+	position: absolute;
+	font-size: 14px;
+	font-family: SimSun,Hiragino Sans GB;
+	font-style: normal;
+	line-height: 21px;
+	z-index: 10;
+	color: #ffbb76;
+}
+.ui-poptip-blue .ui-poptip-arrow em {
+	color: #B9C8D3;
+}
+.ui-poptip-arrow-7 em {
+	top: 1px;
+	left: 0;
+}
+.ui-poptip-arrow span {
+	position: absolute;
+	font-size: 14px;
+	font-family: SimSun,Hiragino Sans GB;
+	font-style: normal;
+	line-height: 21px;
+	z-index: 10;
+	color: #FFFCEF;
+	top: 0;
+	left: 0;
+}
+.ui-poptip-blue .ui-poptip-arrow span {
+	color: #F8FCFF;
+}
+.ui-poptip-content {
+	float: none;
+	display: inline-block;
+}
+.list li {
+	line-height: 16px;
+	padding: 4px 0;
+}
+.list .icon-list {
+	margin-right: 5px;
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+.list .list-btn {
+	padding-left: 16px;
+}
+.ui-button-sdisable {
+	color: #fff;
+	cursor: default;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.list-btn-explain {
+	line-height: 24px;
+	vertical-align: middle;
+}
+.list-btn-explain {
+	line-height: 24px;
+	vertical-align: middle;
+}
+.list .list-btn-explain-error {
+	color: #30940E;
+
+}
+.ui-form-item-last {
+	padding: 0 5px 40px 200px;
+	position: static;
+}
+.ui-form-item-last {
+	padding: 0 5px 40px 200px;
+	position: static;
+}
+.ui-form-other {
+	display: inline-block;
+	margin-left: 5px;
+	padding-left: 10px;
+	vertical-align: top;
+	line-height: 30px;
+}
+
+/*重置登录密码页面*/
+.ui-iconfontstep li .ui-step-icon {
+	font-weight: 700;
+	color: #fff;
+}
+.ui-iconfontstep-done .ui-step-icon strong {
+	position: absolute;
+	height: 3px;
+	left: 34px;
+	top: 14px;
+	display: block;
+	line-height: 1;
+	overflow: hidden;
+	width: 321px;
+	background-color: #65B70D;
+}
+.ui-iconfontstep-done li .ui-step-icon {
+	width: 30px;
+	height: 27px;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	font-weight: 700;
+	color: #fff;
+}
+.ui-iconfontstep-done .iconfont.success {
+	color: #6ABA0B;
+	background: url(../img/icon-lingxing-chenk.png);
+	background-size:100% 100%;
+}
+.maincenter-box {
+	width: 732px;
+	padding: 20px;
+	margin-bottom: 30px;
+	background-color: #fff;
+	border: 1px solid #e3e3e3;
+	border-radius: 1px;
+	box-shadow: 1px 1px 2px #f0f0f0;
+}
+.ui-form-item .ui-text-amount {
+	color: #30940E;
+	line-height: 30px;
+}
+.pwd-suceess{
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 20px;
+	color: #30940E;
+	font-family: '幼圆';
+}
+/*忘记密码输入错误*/
+.ui-input.error{border: 1px solid red;}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>用户中心-我的积分-生鲜网</title>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/index.css" media="all" />
+		<link rel="stylesheet" href="css/plulic.css" media="all" >
+		<link rel="stylesheet" href="css/userInfo.css" media="all" >
+		<link rel="stylesheet" href="css/city-picker.css"  media="all"/><!--地址联动样式-->
+		<link href='img/index/logo.png' rel='icon' type='image/x-icon'/>
+		<style>
+			.layui-form input{width: 200px;}
+			.layui-laydate-content td.laydate-selected{background-color: #2F8F0A !important;}
+		</style>
+	</head>
+	<body>
+		<nav>
+				<ul class="layui-nav layui-row">
+					<!--<li class="layui-nav-item">
+				    	<a href="">控制台<span class="layui-badge">9</span></a>
+				  	</li>-->
+				  	<li class="layui-nav-item layui-col-xs2 layui-col-sm2 layui-col-md1">
+				    	<a href="">请登录</a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs1 layui-col-sm1 layui-col-md1">
+				    	<a href="">注册</a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs3 layui-col-sm1 layui-col-md4" style="display: none;">
+				    	<a href="">个人中心<span class="layui-badge-dot"></span></a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs2 layui-col-sm1 layui-col-md1" style="display: none;">
+				    	<a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+				    	<dl class="layui-nav-child">
+				      		<dd><a href="javascript:;">我的信息</a></dd>
+				      		<dd><a href="javascript:;">修改信息</a></dd>
+				      		<dd><a href="javascript:;">退出</a></dd>
+				    	</dl>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs3 layui-col-sm3 layui-col-md1" style="margin-right: 0px;" >
+				    	<a href=""><img src="img/index/icon-shop-cart.png" class="layui-nav-img" >购物车<span class="layui-badge" >119</span></a>
+				    </li>
+				    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1" >
+				    	<a href=""><img src="img/index/icon-order.png" class="layui-nav-img">我的订单</a>
+				  	</li>
+				    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1">
+				    	<a href=""><img src="img/index/icon-fen.png" class="layui-nav-img">网站导航</a>
+				    	<dl class="layui-nav-child" style="text-indent: 10px;">
+				      		<dd><a href="javascript:;">蔬菜类</a></dd>
+				      		<dd><a href="javascript:;">水果类</a></dd>
+				      		<dd><a href="javascript:;">副食类</a></dd>
+				      		<dd><a href="javascript:;">肉类</a></dd>
+				      		<dd><a href="javascript:;">调料类</a></dd>
+				    	</dl>
+				    </li>
+				</ul>
+			</nav>
+		<section>
+			<div style="display: none;">
+				<input class="cityPicker" size="70" data-toggle="city-picker"  name="title" lay-verify="title"  autocomplete="off" placeholder="点击从下拉面板中选择省/市/区/县" class="layui-input" type="text" value="重庆/南岸区/内环以内" data-value="" style="display: none;">
+			</div>
+			<div class="user_center_main">
+				<!--  用户信息框分为 左边右边  -->
+				<div class="user_center_main_box layui-clear">
+					<!-- 左边  -->
+					<div class="user_center_left">
+						<p class="menu_tit">账号信息</p>
+						<ul class="menu_group ">
+							<li class="menu_group_list "><a  href="#"><i class="my-info"></i>我的资料</a></li>
+							<li class="menu_group_list"><a><i class="my-collection" class="#"></i>我的收藏</a></li>
+							<li class="menu_group_list"><a href="shopcard.html"><i class="my-card"></i>我的购物车</a></li>
+						</ul>
+						<p class="menu_tit">账号记录</p>
+						<ul class="menu_group ">
+							<li class="menu_group_list"><a><i class="my-order"></i>我的订单</a></li>
+							<li class="menu_group_list"><a class="hover"><i class="my-integral"></i>我的积分</a></li>
+							<li class="menu_group_list"><a><i class="my-address"></i>收货地址</a></li>
+						</ul>
+						<p class="menu_tit">账号安全</p>
+						<ul class="menu_group ">
+							<li class="menu_group_list"><a><i class="my-pwd"></i>修改密码</a></li>
+						</ul>
+					</div>
+					<!-- 右边  我的资料 -->
+					<div class="user_center_right">
+						<div class="user_mian_bar">
+							<p class="user_mian_bar_tit "><span>我的积分</span></p>
+							<div class="layui-form">
+								<div class="layui-inline">
+							      	<label class="layui-form-label">日期范围</label>
+							      	<div class="layui-input-inline">
+							        	<input type="text" class="layui-input" id="integralDate" placeholder=" - ">
+							      	</div>
+							    </div>
+							</div>
+							<table class="layui-table" lay-even="" lay-skin="nob" style="margin-top: 50px;">
+							  	<colgroup>
+								    <col width="100">
+								    <col width="100">
+								    <col width="200">
+								    <col width="100">
+							  	</colgroup>
+							  	<thead>
+							    	<tr>
+								      	<th>人物</th>
+								      	<th>民族</th>
+								      	<th>出场时间</th>
+								      	<th>格言</th>
+								    </tr> 
+							  	</thead>
+							  <tbody id="tbody">
+							    <tr>
+							      	<td>贤心</td>
+							      	<td>汉族</td>
+							      	<td>1989-10-14</td>
+							      	<td>人生似修行</td>
+							    </tr>
+							    
+							  </tbody>
+							</table> 
+							<div id="addIntegral"></div>
+							<div id="pageBox"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<section></section>
+		<script type="text/javascript" src="layui/layui.js" ></script>
+		<script type="text/javascript" src="js/address/jquery.min.js"></script>
+		<script type="text/javascript" src="js/address/city-picker.data.js"></script>
+		<script type="text/javascript" src="js/address/city-picker.js"></script>
+		<script type="text/javascript"  src="js/userInfo.js"></script>
+		<script type="text/javascript">
+		/*	function getIntegral(total=100) {
+				var str = [];
+				for (var i = 0; i < total; i++) {
+					var data=[],imgSrc="img/index/AD0IgPCDBxAEGAAg45GqzQUoiJuxmAYwmgI48gE.png",//图片路径
+						price=23.80,//价格
+						introduce='现摘现货农家新鲜蔬菜水果玉米5斤带皮超甜黄金非转基因嫩玉米棒',//介绍
+						shop='滋果果旗舰店',//店铺
+						trebmls='391',//月成交
+						evaluat='315';//评价
+						str[i] ='<td>贤心'+i+'</td>';
+						str[i] +='<td>汉族</td>';
+						str[i] +='<td>1989-10-14</td>';	
+						str[i] +='<td>人生似修行</td>';	
+				}
+				return str;
+			}
+			layui.use(['laypage', 'layer'], function(){
+  				var laypage = layui.laypage,layer = layui.layer;
+			  	//测试数据
+			  	var data = getIntegral();
+			  	//调用分页
+			  	laypage.render({
+				   	elem: 'addIntegral',//指向存放分页的容器
+				    count: data.length,//数据总数
+				    limit: 6,//每页显示的条数
+					first: '首页',
+		    		last: '尾页',
+		    		prev: '<em>←</em>',
+		    		next: '<em>→</em>',
+		    		curr: location.hash.replace('#page=', ''), //获取hash值为fenye的当前页
+				    hash: 'page' ,//自定义hash值
+				    theme: '#30940E',//自定义主题 
+				    jump: function(obj){
+			      		document.getElementById('tbody').innerHTML = function(){
+				        	var arr = [],
+				        	thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
+				        	layui.each(thisData, function(index, item){
+				          		arr.push('<tr>'+ item +'</tr>');
+			        		});
+			        		return arr.join('');
+				      	}();
+				    }
+			  	});
+			});
+		*/</script>
+	</body>
+</html>

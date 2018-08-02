@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="__PUBLIC__/web/css/config.css" />
+		<link rel="stylesheet" href="__PUBLIC__/web/css/header_one.css" />
+		<link rel="stylesheet" href="__PUBLIC__/web/css/shoping_all.css" />
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="__PUBLIC__/web/css/mui.min1.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/web/css/app.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="header_box">
+			<div class="header">
+				<!--返回图标-->
+				<div class="header_left" >
+					<img src="__PUBLIC__/web/img/fh.png" height="30px" />
+				</div>
+				<div class="header_center">
+					<input type="text" placeholder="输入酒款名称" />
+					<div class="sousuo_icon">搜索</div>
+				</div>
+				<div class="header_right" id="xuan">
+					<img src="__PUBLIC__/web/img/icon/565454564.png" width="28px" />
+				</div>
+			</div>
+		</div>
+		<!--身体-->
+		<div class="content">
+			<!--轮播-->
+            <div class="lunbo">
+				<div id="slider" class="mui-slider">
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="__PUBLIC__/web/img/goods/{$end_image}">
+							</a>
+						</div>
+						<!--
+                        <!-- 第一张
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="__PUBLIC__/web/img/goods_cover/{$first_image}">
+							</a>
+						</div>
+                        -->
+                        <!--第一张-->
+                        <div class="mui-slider-item">
+							<a href="#">
+								<img src="__PUBLIC__/web/img/goods_cover/{$first_image}">
+							</a>
+						</div>
+                        <foreach name="images" item="img">
+                        	<div class="mui-slider-item">
+							<a href="#">
+								<img src="__PUBLIC__/web/img/goods/{$img.image}">
+							</a>
+							</div>
+                        </foreach>
+                        <!--
+						<!-- 第二张
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="__PUBLIC__/web/img/1.jpg">
+							</a>
+						</div>
+						<!-- 第三张
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="__PUBLIC__/web/img/3.jpg">
+							</a>
+						</div>
+						<!-- 第四张
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="__PUBLIC__/web/img/goods/{$end_image}">
+							</a>
+						</div>
+                        -->
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="__PUBLIC__/web/img/goods_cover/{$first_image}">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<foreach name="images" item="num">
+                        <div class="mui-indicator"></div>
+                        </foreach>
+                        
+						
+					</div>
+				</div>
+			</div>
+			<!--名称-->
+			<div class="title">
+				<h4>{$goods.goods_name}</h3>
+				<p>{$goods.goods_ename}</p>
+				<a href="#">系列：{$goods.series_name}</a>
+			</div>
+			<!--价格-->
+			<div class="money">
+				<div class="m_top">
+					<div class="old_money">网上商城价：<span style=" color:red">￥{$goods.goods_price}</span></div>
+					<span class="kuchun">库存：{$goods.goods_inventory}</span>
+				</div>
+				<div class="m_cen">
+					<!--活动价：<span class="new_money">￥160   </span><span class="huodong_time">【活动时间：2017-1-1 - 2017-2-1】</span>-->
+				</div>
+				<div class="m_bot">
+					全场免运费，顺丰或京东配送
+				</div>
+			</div>
+			<!--积分-->
+			<div class="jifen">
+				购买本商品可得：<span>{$goods.goods_price}积分</span>
+			</div>
+			<!--介绍-->
+			<div class="jieshao">
+				<div class="jie_row">
+					<div class="jie_low">类型：红葡萄酒</div>
+					<div class="jie_low">容量：{$goods.goods_capacity}ml</div>
+				</div>
+				<div class="jie_row">
+					<div class="jie_low">适饮温度：{$goods.goods_pleasant}℃上下</div>
+					<div class="jie_low">酒庄：杜瓦酒庄</div>
+				</div>
+				<div class="jie_row">
+					<div class="jie_low">产区：{$goods.goods_producing}</div>
+					<div class="jie_low">葡萄品种：{$goods.goods_variety}</div>
+				</div>
+                <div class="jie_row">
+					<div class="jie_low">年份：{$goods.goods_year}</div>
+					<div class="jie_low">浏览量：<if condition="$goods.goods_view eq ''">0<else/>{$goods.goods_view}</if>次</div>
+				</div>
+			</div>
+			<!--详情-->
+			<div class="xiangqing">
+				<span>酒款描述:</span><br />
+				<span>&nbsp;&nbsp;&nbsp;{$goods.goods_describe}</span>
+			</div>
+             <input type="hidden" id="id" value="{$goods.id}">
+            
+             <!--评价-->
+        	<div class="pinglun">
+				<div class="fox" id="leiji">
+					<p class="title_p">伯乐评价({$shu})</p>
+					<img src="__PUBLIC__/web/img/fh1.png" height="30px"/>
+				</div>
+                
+				<foreach name="evaluate" item="pinglun">
+                <div class="pl">
+					<div class="pl_title">
+						<div class="pl_img">
+							<img src="__PUBLIC__/web/images/user-photo.png" width="20" height="20" />
+						</div>
+						<div class="pl_name">{$pinglun.vip_name}</div>
+					</div>
+					<div class="pl_text">
+						{$pinglun.evaluate_content}
+					</div>
+					<div class="pl_time">
+						<p>{$pinglun.evaluate_time}</p>
+					</div>
+				</div>
+                </foreach>
+			</div>
+            
+		</div>
+        
+		<!--脚步-->
+		<!--<div class="flear" style="z-index:10000; position:fixed; background-color:#F00;">-->
+        <div class="flear">
+			<div class="f_kuai">
+				<div class="left_kuai" id="shoucang">
+					<div class="left_kuai_img">
+						<img src="__PUBLIC__/web/img/icon/4564.png" height="100%" />
+					</div>
+					<p>收藏</p>
+				</div>
+				<div class="left_kuai" id="gouwuche">
+					<div class="left_kuai_img">
+						<img src="__PUBLIC__/web/img/2.png" height="100%" />
+					</div>
+					<p>购物车</p>
+				</div>
+			</div>
+			<div class="f_kuai">
+				<div class="right_kuai" id="jiaru">
+					加入购物车
+				</div>
+				<div class="right_kuai" id="goumai">
+					立即购买
+				</div>
+			</div>
+		</div>
+        
+        
+		<div class="xianshi" id="xianshi">
+			<div class="shu" id="shu">
+				<div class="but">
+					<span>请输入购买数量：</span>
+					<div class="mui-numbox" data-numbox-min="1" data-numbox-max="999">
+					<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+					<input id="test" class="mui-input-numbox" type="number" value="1">
+					<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+				</div>
+				</div>
+				<div class="btn" id="queding">
+					确定
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="__PUBLIC__/web/js/jquery-1.8.3.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__/web/js/mui.min.js" ></script>
+		<script type="text/javascript">
+		$(function(){
+			$id=$("#id").val();
+			$login="";
+			//1表示该用户已经收藏；0表示未收藏
+			$status=0;
+			//alert($id);
+			//查询该用户是否收藏该商品
+			$.post("{:U('Collect/select_collect')}",{id:$id},function(data){
+				//该用户已经收藏该商品
+				if(data=="error"){
+					$("#shoucang>.left_kuai_img>img").attr("src","__PUBLIC__/web/img/4564.0.0.png");
+					$("#shoucang>p").css("color","#D04610");
+					$status=1;
+				}
+				$login=data;
+			});	
+		});
+		$("#no_footer").removeClass("bottom-fxied");
+		//加入购物车
+		//开始隐藏
+		$(".xianshi").css("display","none");
+		//点击加入购物车
+		$("#jiaru").click(function(){
+			//判断当前是否登录
+			if($login!="login"){
+				$(".xianshi").css("display","block");
+				$("body").css("overflow","hidden");
+				$("#queding").click(function(){
+				$(".xianshi").css("display","none");
+				$("body").css("overflow","visible");
+				//得到选择的数量
+				var num=document.getElementById("test").value;
+				var gid=document.getElementById("id").value;
+				//alert("sdf");	
+				$.post("{:U('Cart/add')}",{num:num,g_id:gid},function(data){
+					if(data=="ok"){
+						mui.toast("添加成功！");
+						}
+					else{
+						mui.toast("添加失败！");
+						}
+					});	
+				});
+			}else{
+				var btnArray = ['确认', '取消'];
+					mui.confirm('请先登录', '', btnArray, function(e){
+						if (e.index == 0) {
+							location.href="{:U('Login/login_mian')}"
+						}
+					});			
+				}
+			});
+//		立即购买
+			
+//		收藏
+			$("#shoucang").click(function(){
+				if($login!="login"){
+					//未收藏
+					if($status==0){
+						$.post("{:U('Collect/add_collect')}",{id:$id},function(data){
+							//收藏成功
+							if(data=="ok"){
+							$("#shoucang>.left_kuai_img>img").attr("src","__PUBLIC__/web/img/4564.0.0.png");
+							$("#shoucang>p").css("color","#D04610");	
+							mui.toast("收藏成功！");
+							$status=1;
+							}
+						
+						});
+					}else{
+						$.post("{:U('Collect/del_collect')}",{id:$id},function(data){
+							$("#shoucang>.left_kuai_img>img").attr("src","__PUBLIC__/web/img/icon/4564.png");
+							$("#shoucang>p").css("color","black");
+							mui.toast("取消收藏！");
+							$status=0;
+						});
+					}
+				}else{
+					var btnArray = ['确认', '取消'];
+					mui.confirm('请先登录', '', btnArray, function(e){
+						if (e.index == 0) {
+							location.href="{:U('Login/login_mian')}"
+						}
+					});		
+				}			
+			});
+			//跳转进入购物车
+			document.getElementById("gouwuche").addEventListener("tap", function() {
+				$.post("{:U('Person/test')}",function(data){
+						if(data=="error"){
+							var btnArray = ['确认', '取消'];
+							
+							mui.confirm('请先登录？', '', btnArray, function(e) {
+								if (e.index == 0) {
+									mui.openWindow({
+									url:"{:U('Login/ajax1')}",
+									id: 'gouwuche'
+									});
+								}
+						 	});
+						}else{
+							mui.openWindow({
+							url: "{:U('Cart/index')}",
+							id: 'gouwuche'
+							});
+						}
+					});
+				
+			});
+			
+			//提交订单
+			document.getElementById("goumai").addEventListener("tap",function(){
+				var ids=document.getElementById("id").value;
+				$.post("{:U('Person/test')}",function(data){
+				if(data=="error"){
+					var btnArray = ['确认', '取消'];
+					
+					mui.confirm('请先登录？', '', btnArray, function(e) {
+				if (e.index == 0) {
+					mui.openWindow({
+					url:"{:U('Login/ajax1')}",
+					id: 'shouhuodizhi'
+					});
+				  }
+				
+				 });
+				}
+				else{
+					location.href="{:U('Orders/test')}?ids="+ids;
+				}
+			});
+			});
+			
+			
+			//累计评价
+			document.getElementById("leiji").addEventListener("tap",function(){
+				mui.openWindow({
+					url:'leijipingjia.html',
+					id:'leijipingjia'
+				});
+			});
+			
+		</script>
+<script type="text/javascript">
+$(function(){
+	//返回键
+	$(".header_left").click(function(){
+		history.back();
+		});
+	
+	//酒款筛选
+		document.getElementById("xuan").addEventListener("tap", function() {
+			mui.openWindow({
+				url: "{:U('Index/screen')}",
+				id: ''
+			});
+		});
+	
+	});
+</script>        
+	</body>
+</html>

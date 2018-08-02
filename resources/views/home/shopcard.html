@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>购物车-生鲜网</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/plulic.css" />
+		<link rel="stylesheet" href="css/shopcard.css">
+		<link href='img/index/logo.png' rel='icon' type='image/x-icon'/>
+	</head>
+	<body>
+		<nav>
+				<ul class="layui-nav layui-row">
+					<!--<li class="layui-nav-item">
+				    	<a href="">控制台<span class="layui-badge">9</span></a>
+				  	</li>-->
+				  	<li class="layui-nav-item layui-col-xs2 layui-col-sm2 layui-col-md1">
+				    	<a href="">请登录</a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs1 layui-col-sm1 layui-col-md1">
+				    	<a href="">注册</a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs3 layui-col-sm1 layui-col-md4" style="display: none;">
+				    	<a href="">个人中心<span class="layui-badge-dot"></span></a>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs2 layui-col-sm1 layui-col-md1" style="display: none;">
+				    	<a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+				    	<dl class="layui-nav-child">
+				      		<dd><a href="javascript:;">我的信息</a></dd>
+				      		<dd><a href="javascript:;">修改信息</a></dd>
+				      		<dd><a href="javascript:;">退出</a></dd>
+				    	</dl>
+				  	</li>
+				  	<li class="layui-nav-item layui-col-xs3 layui-col-sm3 layui-col-md1" style="margin-right: 0px;" >
+				    	<a href=""><img src="img/index/icon-shop-cart.png" class="layui-nav-img" >购物车<span class="layui-badge" >119</span></a>
+				    </li>
+				    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1" >
+				    	<a href=""><img src="img/index/icon-order.png" class="layui-nav-img">我的订单</a>
+				  	</li>
+				    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1">
+				    	<a href=""><img src="img/index/icon-fen.png" class="layui-nav-img">网站导航</a>
+				    	<dl class="layui-nav-child" style="text-indent: 10px;">
+				      		<dd><a href="javascript:;">蔬菜类</a></dd>
+				      		<dd><a href="javascript:;">水果类</a></dd>
+				      		<dd><a href="javascript:;">副食类</a></dd>
+				      		<dd><a href="javascript:;">肉类</a></dd>
+				      		<dd><a href="javascript:;">调料类</a></dd>
+				    	</dl>
+				    </li>
+				</ul>
+			</nav>
+		<section>
+				<div id="header" class="layui-row" data-spm="a2226n0">
+        			<div class="headerLayout layui-col-md12">
+            			<!--<div class="headerCon">-->
+                			<!--<h1 id="mallLogo">
+                    			<span class="mlogo">
+                    				<a href="" title="shengxian.com"><s></s>shengxian.com</a>
+                    			</span>
+                    		</h1>-->
+                 			<div class="j_logo logo-con" data-spm="2015002">
+								<img class="sxian-logo-img" src="img/index/logo.png" style="margin: 1px auto;display:block" data-spm-anchor-id="875.7931836/B.2015002.i0.4dc149926MkTg4" width="240px" height="130px">
+							</div>
+                			<div class="header-extra">
+                    			<div class="header-banner">
+                            		<div>
+                        			</div>
+                    			</div>
+                   			</div>
+                 			<div id="mallSearch" class="mall-search">
+		        				<form name="searchTop" action="" class="mallSearch-form clearfix" target="_top" acceptcharset="gbk" accept-charset="gbk">
+			            			<fieldset>
+				                		<legend>生鲜搜索</legend>
+				                      	<div class="mallSearch-input clearfix">
+				                        	<label for="mq" style="visibility: visible; display: none;">搜索</label>
+			                          		<div class="s-combobox" id="s-combobox-138">
+			                              		<div class="s-combobox-input-wrap">
+			                                    	<input name="q" accesskey="s" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate" value="" id="mq" class="s-combobox-input" role="combobox" aria-haspopup="true" title="请输入搜索文字" aria-label="请输入搜索文字" type="text">
+			                              		</div>
+			                          			<label for="mq" class="s-combobox-placeholder" style="color: rgb(102, 102, 102); visibility: visible;">搜索 </label>
+			                          		</div>
+				                          	<button type="submit">搜索<s></s></button>
+				                          	<input id="J_Type" name="type" value="p" type="hidden">
+				                          	<input id="J_MallSearchStyle" name="style" value="" type="hidden">
+				                          	<input id="J_Cat" name="cat" value="all" type="hidden">
+				                          	<input name="vmarket" value="" type="hidden">
+				                      	</div>
+			             			</fieldset>
+		         				</form>
+			    				<ul data-spm="a1z5h" class="hot-query">
+			    					<li class="hot-query-highlight">
+			    						<a href="#">蔬菜</a>
+			    					</li>
+			    					<li class="">
+			    						<a href="#">水果</a>
+			    					</li>
+			    					<li class="">
+			    						<a href="#">肉类</a>
+			    					</li>
+			    					<li class="hot-query-highlight">
+			    						<a href="#">调料</a>
+			    					</li>
+			    					<li class="">
+			    						<a href="#">粗粮</a>
+			    					</li>
+			    				</ul>
+		                	</div>
+            			<!--</div>-->
+        			</div>
+    			</div>
+			</section>
+		<section>
+			<div class="cart-layout-TB ">
+				<div id="J_Cart" class="cart">
+					<div id="J_FilterBar" class="cart-filter-bar">
+						<div class="wrap-line">
+						</div>
+					</div>
+					<div id="J_CartMain" class="cart-main">
+						<div class="cart-table-th">
+							<div class="wp">
+								<div class="th th-chk">
+									<div id="J_SelectAll1" class="select-all J_SelectAll">
+										<div class="cart-checkbox">
+											<input class="J_CheckBoxShop" id="J_SelectAllCbx1" name="select-all" value="true" type="checkbox">
+											<label for="J_SelectAllCbx1" data-background="transparent url(img/checkbox_true.png)">勾选购物车内所有商品</label>
+										</div>&nbsp;&nbsp;全选
+									</div>
+								</div>
+								<div class="th th-item">
+									<div class="td-inner">商品信息</div>
+								</div>
+								<div class="th th-info">
+									<div class="td-inner">kong</div>
+								</div>
+								<div class="th th-price">
+									<div class="td-inner">单价</div>
+								</div>
+								<div class="th th-amount">
+									<div class="td-inner">数量</div>
+								</div>
+								<div class="th th-sum">
+									<div class="td-inner">金额</div>
+								</div>
+								<div class="th th-op">
+									<div class="td-inner">操作</div>
+								</div>
+								<div class="th th-vil hidden">
+									<div class="td-inner">购买客户信息</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="" id="J_OrderList">
+							<div id="J_OrderHolder_s_1782727258_1" style="height: auto;">
+								<div class="J_Order layui-clear order-body">
+									<div class="J_ItemHead shop layui-clear">
+										<div class="shop-info" style="display: none;">
+											<div class="cart-checkbox ">
+												<input class="J_CheckBoxShop" id="J_CheckShop_s_1782727258_1" name="orders[]" value="s_1782727258_1" type="checkbox">
+												<label for="J_CheckShop_s_1782727258_1">勾选此店铺下所有商品</label>
+											</div>
+											<span class="shop-icon icon-B"></span>店铺：
+											<a href="#" target="_blank" title="rozo旗舰店" class="J_MakePoint" data-point="tbcart.8.15">rozo旗舰店</a>
+										</div>
+										<div class="order-promo-info">
+											<div class="scrolling-container">
+												<ul class="scrolling-promo-hint J_ScrollingPromoHint" style="position: relative;top: 0px;">
+													<li class="ks-switchable-panel-internal151" style="display: block;">满33.8元,省15.9元</li>
+													<li class="ks-switchable-panel-internal151" style="display: block;"></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="order-content">
+										<div  class="item-list">
+											<div   class="bundle  bundle-last ">
+												<div  class="item-holder">
+													<div class="J_ItemBody item-body layui-clear item-normal  first-item ">
+														<ul class="item-content layui-clear ">
+															<li class="td td-chk">
+																<div class="td-inner">
+																	<div class="cart-checkbox ">
+																		<input class="J_CheckBoxItem" id="J_CheckBox_748114254867" name="items[]" value="748114254867" type="checkbox">
+																		<label for="J_CheckBox_748114254867">勾选商品</label>
+																	</div>
+																</div> 
+															</li>
+															<li class="td td-item">
+																<div class="td-inner">
+																	<div class="item-pic J_ItemPic img-loaded">
+																		<a href="#" target="_blank" data-title="" class="J_MakePoint" data-point="tbcart.8.12" data-spm-anchor-id="a1z0d.6639537.1997196601.3">
+																			<img src="img/cabbage2.jpg" class="itempic J_ItemImg">
+																		</a>
+																	</div>
+																	<div class="item-info">
+																		<div class="item-basic-info">
+																			<a href="#" class="item-title J_MakePoint" target="_blank" title="">包菜</a>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-info"> 
+																<div class="item-props item-props-can">
+																	<p class="sku-line" tabindex="0">重量：500g</p>
+																	<span tabindex="0" class="btn-edit-sku J_BtnEditSKU J_MakePoint" data-point="tbcart.8.10">修改</span>
+																</div>
+															</li>
+															<li class="td td-price"> 
+																<div class="td-inner">
+																	<div class="item-price price-promo-">
+																		<div class="price-content">
+																			<div class="price-line">
+																				<em class="price-original">￥59.00</em>
+																			</div>
+																			<div class="price-line">
+																				<em class="J_Price price-now" tabindex="0">￥17.90</em>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-amount"> 
+																<div class="td-inner">
+																	<div class="amount-wrapper ">
+																		<div class="item-amount ">
+																			<a href="#" class="J_Minus minus active">-</a>
+																			<input value="1" class="text text-amount J_ItemAmount" data-max="4579" data-now="1" autocomplete="off" type="text">
+																			<a href="#" class="J_Plus plus active ">+</a>
+																		</div>
+																		<div class="amount-msg J_AmountMsg">
+																			
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-sum">
+																<div class="td-inner">
+																	<em tabindex="0" class="J_ItemSum number">￥81.60</em>
+																	<div class="J_ItemLottery"></div>
+																</div> 
+															</li>
+															<li class="td td-op">
+																<div class="td-inner">
+																	<a title="移入收藏夹" class="btn-fav J_Fav J_MakePoint" data-point-url="#" href="#">移入收藏夹</a>
+																	<a href="javascript:;" data-point-url="#" class="J_Del J_MakePoint">删除</a>
+																	<div class="find-similar J_find_similar close" data-sellerid="1782727258" data-itemid="521652675810" data-categoryid="50010798">
+																		<div class="J_find_similar_trigger">
+																			<a href="javascript:;" class="new-find-similar">相似宝贝</a>
+																			<span class="arrow"></span>
+																			<i class="icon-bd-title"></i>
+																		</div>
+																		<div class="find-similar-body" >
+																			<img src="img/icon-loading.gif" class="find-similar-loading">
+																			<div class="find-similar-wrap " style="display:block">
+																				<div class="find-similar-item-wrap">
+																					<div class="find-similar-item first">
+																						<div class="fsi-addedtocart">
+																					        <span>该宝贝已经加入购物车</span>
+																					        <i class="triangle"></i>
+																					    </div>
+																					    <div class="fsi-hasshop">
+																						  	<span>该店有宝贝已加购物车</span>
+																						  	<i class="triangle"></i>
+																						</div>
+																						<div class="fsi-img-wrap">
+																							<a href="#" target="_blank">
+																								<div class="fsi-img">
+																									<img src="img/cabbage2.jpg" alt="包菜" data-spm-anchor-id="">
+																								</div>
+																							</a>
+																							<a href="#" target="_blank" class="fsi-addtocart J_CartPluginTrigger">加入购物车</a>
+																						</div>
+																						<div class="fsi-info-wrap">
+																							<div class="fsi-price">
+																								<strong>
+																					              	<span class="unit">&#165;</span>
+																					              	<em>9.9</em>
+																					            </strong>
+																							</div>
+																							<div class="fsi-bought">
+																					            214人付款
+																					        </div>
+																						</div>
+																						<div class="fsi-title">
+																							<a href="_blank" href="#" title="包菜">包菜</a>
+																						</div>
+																					</div>
+																				</div>
+																			    <div class="find-similar-identifiers"><!--相似宝贝左右小圆点-->
+																			    	<a href="javascript:void(0)" data-id="1" data-hasover="true" class="current J_fs_trigger fs-trigger-1">•</a>
+																			    	<a href="javascript:void(0)" data-id="2" data-hasover="true" class="J_fs_trigger fs-trigger-2">•</a>
+																			    	<a href="javascript:void(0)" data-fstid="3" data-hasover="true" class="J_fs_trigger fs-trigger-3">•</a>
+																			    	<a href="javascript:void(0)" data-fstid="4" data-hasover="true" class="J_fs_trigger fs-trigger-4">•</a>
+																			    	<a href="javascript:void(0)" data-fstid="5" data-hasover="true" class="J_fs_trigger fs-trigger-5">•</a>
+																			    </div>
+																			    <div class="find-similar-switchbtns"><!--相似宝贝左右箭头-->
+																				    <a href="javascript:void(0)" data-prev="0" class="fss-navigator fss-prev J_fs_prev no-more"><img src="img/icon-left.png"></a>
+																				    <a href="javascript:void(0)" data-next="1" class="fss-navigator fss-next J_fs_next "><img src="img/icon-right.png"></a>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="J_FloatBarHolder" class="float-bar-holder">
+						<div id="J_FloatBar" class="float-bar clearfix default" style="position: static;background: #e5e5e5;">
+							<div id="J_SelectedItems" class="group-wrapper group-popup hidden" style="display: none;">
+								<div id="J_SelectedItemsList" class="group-content"></div>
+								<span class="arrow"></span>
+							</div>
+							<div class="float-bar-wrapper" >
+								<div id="J_SelectAll2" class="select-all J_SelectAll" >
+									<div class="cart-checkbox">
+										<input class="J_CheckBoxShop" id="J_SelectAllCbx2" name="select-all" value="true" type="checkbox">
+										<label for="J_SelectAllCbx2">勾选购物车内所有商品</label>
+									</div>&nbsp;全选
+								</div>
+								<div class="operations">
+									<a href="#" hidefocus="true" class="J_DeleteSelected">删除</a>
+									<a href="#" hidefocus="true" class="J_ClearInvalid hidden" style="display: inline;">清除失效宝贝</a>
+									<a href="#" hidefocus="true" class="J_BatchFav">移入收藏夹</a>
+									<a href="#" hidefocus="true" class="J_BatchShare">分享</a>
+								</div>
+								<div class="float-bar-right">
+									<div id="J_ShowSelectedItems" class="amount-sum">
+										<span class="txt">已选商品</span>
+										<em id="J_SelectedItemsCount">0</em>
+										<span class="txt">件</span>
+										<div class="arrow-box" style="display: none;">
+											<span class="selected-items-arrow"></span>
+											<span class="arrow"></span>
+										</div>
+									</div>
+									<div id="J_CheckCOD" class="check-cod" style="display: none;">
+										<span class="icon-cod"></span>
+										<span class="s-checkbox J_CheckCOD"></span>货到付款</div>
+										<div class="pipe"></div>
+										<div class="price-sum">
+											<span class="txt">合计（不含运费）：</span>
+											<strong class="price">
+												<em id="J_Total">&nbsp;
+													<span class="total-symbol">0.00</span>
+												</em>
+											</strong>
+										</div>
+										<div class="btn-area">
+											<a href="javascript:void(0)" id="J_Go" class="submit-btn submit-btn-disabled" aria-label="请注意如果没有选择宝贝，将无法结算">
+												<span>结&nbsp;算</span>
+												<b></b>
+											</a>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>	
+			<footer class="footer" style="top:200px">
+				<ul class="layui-clear">
+					<li>
+						<span>服务保证</span>
+						<ul>
+							<li>正品保证</li>
+							<li>绿色新鲜</li>
+							<li>按时送达</li>
+							<li>7&#215;15小时客户服务</li>
+						</ul>
+					</li>
+					<li>
+						<span>支付方式</span>
+						<ul>
+							<li>在线支付</li>
+							<li>货到付款</li>
+							<li>分期付款</li>
+							<li>转账付款</li>
+						</ul>
+					</li>
+					<li>
+						<span>商家服务</span>
+						<ul>
+							<li>商家入驻</li>
+							<li>广告服务</li>
+							<li>服务市场</li>
+							<li>培训中心</li>
+						</ul>
+					</li>
+					<li>
+						<span>物流配送</span>
+						<ul>
+							<li>免配送费</li>
+							<li>211限时达</li>
+							<li>专人配送</li>
+							<li>EMS</li>
+						</ul>
+					</li>
+					<li><div><img src="img/index/bg-code.png"></div></li>
+				</ul>
+				<div class="lg-footer J-loginLanguage">
+		    		<!--copyright start-->
+				    <div class="copyright">
+				        <p class="tag-line">
+				            Copyright &copy; 2017<script>
+				            	new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());
+				            </script> 
+				            <span>蒋中梅&nbsp;版权所有</span>
+				        </p>
+				    </div>
+				</div>
+			</footer>
+   
+		<!--图片放大-->
+		<div id="J_PicZoom" class="ks-overlay small2big-popup ks-overlay-hidden" style="z-index: 13000; left: 499.5px; top: 238px;" data-spm-anchor-id="a1z0d.6639537.0.i0.505574849tcWuE">
+			<div id="ks-content-ks-component5670" class="ks-overlay-content">
+				<div class="item-big-pic cart-pic s240">
+					<a href="#" target="_blank">
+						<img src="img/cabbage2.jpg" class="J_MakePoint">
+					</a>
+				</div>
+				<span class="arrow" style="top: 69px;"></span>
+			</div>
+		</div>
+		<script type="text/javascript" src="layui/layui.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/public/jquery-1.9.1.min.js" ></script>
+		<script type="text/javascript" src="js/public/base.js"></script><!--小广告-->
+		<script type="text/javascript" src="js/public/adaptive.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/public/config.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/shopcard.js" charset="utf-8"></script>
+	</body>
+</html>

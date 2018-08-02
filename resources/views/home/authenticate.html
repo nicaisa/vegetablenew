@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>验证身份-生鲜网</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+		<link rel="stylesheet" href="css/plulic.css" />
+		<link rel="shortcut icon" href='img/index/logo.png' rel='icon' type='image/x-icon'/>
+	</head>
+	<body class="forget-password authenticate">
+		<div id="header">
+			<div class="header-layout">
+				<h1 class="logo" id="logo"><a href=""></a></h1>
+				<h2 class="logo-title"> 验证身份 </h2>
+				<ul class="header-nav">
+		    		<li class="nav-first"><a href="register.html" target="_blank"> 注册 </a></li>
+					<li><a href="login1.html" target="_blank"> 登录 </a></li>
+					<li><a href="" target="_blank">  </a></li>
+	        	</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div class="content-layout">
+				<div class="maincenter">
+					<ol class="ui-step ui-step-3" style="overflow: visible">
+		                <li class="ui-step-start ui-step-active" id="stepstart">
+				            <div class="ui-step-line">-</div>
+				            <div class="ui-step-icon">
+				                <i class="iconfont active"></i>
+				                <i class="ui-step-number">1</i>
+				                <span class="ui-step-text">验证身份</span>
+				            </div>
+				        </li>
+		                <li>
+			                <div class="ui-step-line">-</div>
+			                <div class="ui-step-icon">
+			                    <i class="iconfont"></i>
+			                    <i class="ui-step-number">2</i>
+			                    <span class="ui-step-text">找回密码</span>
+			                </div>
+		            	</li>
+		                <li class="ui-step-end">
+				            <div class="ui-step-line">-</div>
+				            <div class="ui-step-icon">
+				                <i class="iconfont"></i>
+				                <i class="ui-step-number">√</i>
+				                <span class="ui-step-text">完成</span>
+				            </div>
+		        		</li>
+		    		</ol>
+					<div class="maincenter-box">
+						<div class="maincenter-box-tip">
+							<p class="ui-tiptext ui-tiptext-message">
+								<span class="ui-tiptext-icon"></span>
+								您正在使用 “<span class="strong">验证短信</span>” 进行校验。
+							</p>
+						</div>
+						<from id="J-selectStrategyForm" class="ui-form" method="post">
+							<input name="_form_token" value="" type="hidden">
+							<div class="ui-form-item">
+								<label class="ui-label ui-label-reset">手机号码</label>
+								<p class="ui-form-text" id="J-mobile" style="line-height: 30px;">157******55</p>
+							</div>
+							<div class="ui-form-item">
+								<label class="ui-label">校验码</label>
+								<p class="ui-button ui-button-swhite " id="J-getCode">
+		                            <input autocomplete="off" class="ui-button-text layui-btn layui-btn-sm ui-button ui-button-morange" value="点此免费获取" seed="Use-checkCode-for-resetQueryPwd-1" type="button" style="width:150px">
+		                        </p>
+		                        <input class="ui-input ui-input-checkcode  fn-hide " placeholder="6位数字" id="J-inputCode" name="checkCode" autocomplete="off" value="" data-explain=" " maxlength="6"  type="text">
+								<span class="ui-form-other  fn-hide " id="J-noCode">
+		                            <a href="#" class="ui-form-other-link" id="J-noCode-link" seed="Use-checkCode-for-resetQueryPwd-3">没收到短信校验码？</a>
+		                        </span>
+		                        <div class="ui-poptip ui-poptip-blue j-tipshow fn-hide" id="J-resentCode" data-widget-cid="widget-1">
+		                            <div class="ui-poptip-shadow">
+		                                <div class="ui-poptip-container">
+		                                    <div class="ui-poptip-arrow ui-poptip-arrow-7">
+		                                        <em>◆</em>
+		                                        <span>◆</span>
+		                                    </div>
+		                                    <div class="ui-poptip-content">
+		                                        <ul class="list">
+		                                            <li><i class="icon-list"></i>网络通讯异常可能会造成短信丢失，请重新获取或稍后再试。</li>
+		                                            <li class="list-btn">
+		                                                <p class="ui-button  ui-button-sdisable" id="J-reGetCode" data-widget-cid="widget-0">
+		                                                    <button class="ui-button-text layui-btn layui-btn-sm ui-button ui-button-morange"  type="button" autocomplete="off" seed="JReGetCode-btn" smartracker="on" style="width:250px;">重新获取校验码</button>
+		                                                </p>
+		                                                <span class="list-btn-explain list-btn-explain-loading" id="J-reGetCode-success"></span>
+		                                                <p class="list-btn-explain list-btn-explain-error fn-hide" id="J-reGetCode-error"><i class="icon icon-error"></i></p>
+		                                            </li>
+		                                            <li><i class="icon-list"></i>请核实手机是否已欠费停机，或者屏蔽了系统短信。</li>
+		                                        </ul>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+							</div>
+							<div class="ui-form-item ui-form-item-last ">
+								<div class="ui-button ui-button-morange" id="J-submit-btn">
+				                    <input value="下一步" class="ui-button-text layui-btn layui-btn-xs ui-button ui-button-morange" seed="" type="submit" style="height: 25px;line-height: 20px;">
+				                </div>
+							</div>
+						</from>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/address/jquery.min.js"></script>
+		<script type="text/javascript">
+			//点击“获取验证码”，显示验证码输入框
+			$("#J-getCode").on('click',function(){
+				$(this).next().show();
+			})
+			//鼠标离开验证码输入框
+			$("#J-getCode").next().on('blur',function(){
+				if ($(this).val()=='') {
+					$(this).prev().hide();
+					$(this).next().css({'display':'inline-block'});
+				} else {
+					$(this).prev().show();
+					$(this).next().hide();
+				}
+			})
+			//鼠标移入“没有收到短信验证码”
+			$("#J-getCode").next().next().on('mouseenter',function(){
+				$(this).next().show().css({'marginTop':'30px'});
+			})
+			//点击“重新输入短信验证码”
+			$("#J-reGetCode").on('click',function(){
+				$("#J-resentCode").hide();
+			})
+			//点击“下一步”
+			$("#J-submit-btn").on('click',function(){
+				var val=$("#J-getCode").next().val();
+				var reg=/^\d{6}$/;
+				if (val.match(reg)) {
+					window.location.href="reset-password.html";
+				}
+			})
+		</script>
+	</body>
+</html>

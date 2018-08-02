@@ -1,0 +1,173 @@
+header {
+	width: 100%;
+	height: 195px;
+	border-bottom: 2px solid #D2524C;
+	box-sizing: border-box;
+}
+
+.header-con {
+	width: 1200px;
+	height: 195px;
+	margin: auto;
+}
+
+.headerC-top {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.search-box {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.search {
+	width: 700px;
+	border: none;
+	border: 2px solid #d2524c;
+	height: 45px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	outline: none;
+}
+
+.search-btn {
+	width: 80px;
+	height: 45px;
+	border: none;
+	background: #d2524c;
+	color: #fff;
+	font-size: 18px;
+}
+
+.headerC-nav {
+	line-height: 42px;
+}
+
+.nav-list1 {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.nav-list1>li>a {
+	display: inline-block;
+	line-height: 40px;
+	padding: 0 42px;
+	box-sizing: border-box;
+	color: #000;
+	font-size: 18px;
+}
+
+.nav-list1>li {
+	position: relative;
+}
+
+.nav-list2 {
+	position: absolute;
+	top: 42px;
+	left: 0px;
+	display: none;
+	background: #fff;
+	
+}
+
+.nav-list1>li:hover .nav-list2 {
+	display: block;
+}
+
+.nav-list1>li>a:hover {
+	background: #d2524c;
+	color: #fff;
+}
+
+.nav-list2>li {
+	padding: 0 40px;
+	box-sizing: border-box;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.nav-list3 {
+	background: #fff;
+	position: absolute;
+	width: 700px;
+	top: 42px;
+	left: 110px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	display: none;
+}
+.nav-list-display{
+	display: block;
+	/*display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;*/
+	display:list-item;
+}
+.nav-list3>li{
+	padding: 0 10px;
+	box-sizing: border-box;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.nav-list2 a,.nav-list3 a{
+	color: #000;
+}
+<!--[if IE]>
+ .headerC-top {
+	width: 100%;
+}
+
+.logo-img {
+	float: left;
+}
+
+.search-box {
+	float: right;
+	height: 150px;
+	padding: 50px 0;
+	box-sizing: border-box;
+}
+
+.search {
+	float: left;
+}
+
+.search-btn {
+	float: left;
+}
+.headerC-nav{
+	clear: both;
+}
+.nav-list1 li{
+	float: left;
+}
+<![endif]-->
+
+/*返回导航*/
+.per-nav{
+	/*width: 100%;*/
+	/*height: 50px;*/
+	text-align: left !important;
+}
+.per-nav>a{
+	font-size: 14px;
+	color: #1a1a1a;
+	line-height: 50px;
+	cursor: pointer;
+}

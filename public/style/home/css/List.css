@@ -1,0 +1,174 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.box{
+	width: 100%;
+	height: auto;
+}
+.box::after{
+	display: block;
+	content: "";
+	clear: both;
+}
+a{
+	color: black;
+}
+.box_home{
+	width: 1200px;
+	height: auto;
+	margin: auto;
+}
+.span1{
+	font-size: 14px;
+	margin-left: 30px;
+}
+.span2{
+	display: block;
+	font-size: 20px;
+	margin-top: 10px;
+}
+.nav{
+	width: 100%;
+	height: 40px;
+	padding: 10px 0;
+	border: 2px solid gainsboro;
+}
+.nav>ul{
+	list-style: none;
+	/*height: 100%;*/
+	float: left;
+}
+.nav>ul>li{
+	float: left;
+	height: 100%;
+	border: 1px solid gainsboro;
+	padding: 0 20px;
+	box-sizing: border-box;
+	line-height: 40px;
+	cursor: pointer;
+	border-bottom: none;
+	border-top: none;
+	border-left: none;
+}
+.money{
+	float: left;
+	width: 750px;
+	height: 40px;
+	margin-left: 30px;
+	
+}
+.d{
+	width: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+}
+.money_left,.money_right{
+	width: 100px;
+	height: 100%;
+	line-height: 40px;
+	border: 1px solid gainsboro;
+	float: left;
+}
+.btn{
+	width: 50px;
+	height: 100%;
+	border: 1px solid gainsboro;
+	float: left;
+	margin-left: 30px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+}
+.money>ul{
+	float: left;
+	list-style: none;
+	margin-left: 30px;
+	width: 300px;
+	height: 100%;
+}
+.money>ul>li{
+	float: left;
+	text-align: center;
+	height: 40px;
+	padding: 0 20px;
+	line-height: 40px;
+	box-sizing: border-box;
+	border: 1px solid gainsboro;
+	cursor: pointer;
+}
+.img_box{
+	width: 100%;
+	height: auto;
+}
+.goods{
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+}
+.goods>ul{
+	width: 100%;
+	height: auto;
+	list-style: none;
+}
+.goods>ul>li{
+	width: 20%;
+	height: 420px;
+	float: left;
+	padding: 5px 15px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	cursor: pointer;
+	
+}
+.goods>ul>li .img_box img{
+	width: 100%;
+}
+.text{
+	width: 100%;
+	height: 100px;
+
+}
+.xs{
+	width:100%;
+	height: 20px;
+	background: #d2524c;
+	text-align: center;
+	color: white;
+	line-height: 20px;
+	font-size: 14px;
+	display: none;
+}
+.name{
+	font-size: 14px;
+	text-align: center;
+	height: 20px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding: 0px 10px;
+	box-sizing: border-box;
+	margin-top: 10px;
+}
+.mon{
+	width: 100%;
+	height: 20px;
+	padding: 0px 10px;
+	box-sizing: border-box;
+	margin-top: 10px;
+}
+.xj{
+	color: #D2524C;
+}
+.yj{
+	font-size: 12px;
+	color: grey;
+	text-decoration: line-through;
+	margin-left: 5px;
+}
+.pj{
+	float: right;
+	margin-right: 10px;
+}
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>评论-生鲜网</title>
+		<link rel="stylesheet" href="layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/index.css" media="all" />
+		<link rel="stylesheet" href="css/plulic.css" media="all" >
+		<link rel="stylesheet" href="css/pay-now.css" media="all" >
+		<link rel="stylesheet" href="css/shopcard.css" media="all">
+	</head>
+	<body>
+		<nav>
+			<ul class="layui-nav layui-row">
+				<!--<li class="layui-nav-item">
+			    	<a href="">控制台<span class="layui-badge">9</span></a>
+			  	</li>-->
+			  	<li class="layui-nav-item layui-col-xs2 layui-col-sm2 layui-col-md1">
+			    	<a href="">请登录</a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs1 layui-col-sm1 layui-col-md1">
+			    	<a href="">注册</a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs3 layui-col-sm1 layui-col-md4" style="display: none;">
+			    	<a href="">个人中心<span class="layui-badge-dot"></span></a>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs2 layui-col-sm1 layui-col-md1" style="display: none;">
+			    	<a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+			    	<dl class="layui-nav-child">
+			      		<dd><a href="javascript:;">我的信息</a></dd>
+			      		<dd><a href="javascript:;">修改信息</a></dd>
+			      		<dd><a href="javascript:;">退出</a></dd>
+			    	</dl>
+			  	</li>
+			  	<li class="layui-nav-item layui-col-xs3 layui-col-sm3 layui-col-md1" style="margin-right: 0px;" >
+			    	<a href=""><img src="img/index/icon-shop-cart.png" class="layui-nav-img" >购物车<span class="layui-badge" >119</span></a>
+			    </li>
+			    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1" >
+			    	<a href=""><img src="img/index/icon-order.png" class="layui-nav-img">我的订单</a>
+			  	</li>
+			    <li class="layui-nav-item layui-col-xs3 layui-col-sm2 layui-col-md1">
+			    	<a href=""><img src="img/index/icon-fen.png" class="layui-nav-img">网站导航</a>
+			    	<dl class="layui-nav-child" style="text-indent: 10px;">
+			      		<dd><a href="javascript:;">蔬菜类</a></dd>
+			      		<dd><a href="javascript:;">水果类</a></dd>
+			      		<dd><a href="javascript:;">副食类</a></dd>
+			      		<dd><a href="javascript:;">肉类</a></dd>
+			      		<dd><a href="javascript:;">调料类</a></dd>
+			    	</dl>
+			    </li>
+			</ul>
+		</nav>
+		<section>
+			<div id="page" class="">
+				<div id="content" style="margin-top: 100px;">
+					<from class="rateListForm" class="tb-rate-pt-l">
+						<input name="_tb_token_" value="" type="hidden">
+						<input name="tokenId" value="" type="hidden">
+						<input name="parentTradeId" value="" type="hidden">
+						<div class="tb-rate-con-tabbed-box">
+							<div class="tabbed-box-hd">
+								<h3 class="title" >评价宝贝</h3>
+							</div>
+						</div>
+						<div class="tb-rate-con-tabbed-box">
+							<div class="itemlist">
+								<ul class="rate-list ">
+									<li>
+										<div class="item-rate-info" data-spm="1000328">
+											<div class="item-detail">
+												<a href="#" target="_blank" class="item-d-img">
+													<img src="img/cabbage.jpg">
+												</a>
+												<div class="item-title">
+													<a href="#" target="_blank" title="">包菜</a>
+												</div>
+											</div>
+										</div>
+										<div class="item-rate-main">
+											<div class="item-rate-act">
+												<div class="rate-control">
+													<ul >
+														<li class="good">
+															<label for="">
+																<input class="rate" id="" name="" value="1" type="radio">
+																<i class="radio-bg"></i>
+																<i class="tb-rate-ico ico-good" title="好评"></i>
+															</label>
+															<span class="rate-score rate-score-good">卖家<br>+1分</span>
+														</li>
+														<li class="normal">
+															<label for="">
+																<input class="rate" id="" name="" value="1" type="radio" >
+																<i class="radio-bg"></i>
+																<i class="tb-rate-ico ico-neutral" title="中评"></i>
+															</label>
+															<span class="rate-score rate-score-good">卖家<br>+1分</span>
+														</li>
+														<li class="bad rate-checked">
+															<label for="">
+																<input class="rate" id="" name="" value="1" type="radio">
+																<i class="radio-bg"></i>
+																<i class="tb-rate-ico ico-bad" title="差评"></i>
+															</label>
+															<span class="rate-score rate-score-bad">卖家<br>+1分</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="rate-msg-box">
+												<div class="bd">
+													<div class="textinput">
+														<textarea class="rate-msg" maxlength="500" name=""></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="submitbox">
+							<button type="submit" class="J_submit_rate tb-rate-btn type-primary wide-xxl">发表评论</button>
+						</div>
+					</from>
+				</div>
+			</div>
+		</section>
+			<footer class="footer" style="top:165px">
+			<ul class="layui-clear">
+				<li>
+					<span>服务保证</span>
+					<ul>
+						<li>正品保证</li>
+						<li>绿色新鲜</li>
+						<li>按时送达</li>
+						<li>7&#215;15小时客户服务</li>
+					</ul>
+				</li>
+				<li>
+					<span>支付方式</span>
+					<ul>
+						<li>在线支付</li>
+						<li>货到付款</li>
+						<li>分期付款</li>
+						<li>转账付款</li>
+					</ul>
+				</li>
+				<li>
+					<span>商家服务</span>
+					<ul>
+						<li>商家入驻</li>
+						<li>广告服务</li>
+						<li>服务市场</li>
+						<li>培训中心</li>
+					</ul>
+				</li>
+				<li>
+					<span>物流配送</span>
+					<ul>
+						<li>免配送费</li>
+						<li>211限时达</li>
+						<li>专人配送</li>
+						<li>EMS</li>
+					</ul>
+				</li>
+				<li><div><img src="img/index/bg-code.png"></div></li>
+			</ul>
+			<div class="lg-footer J-loginLanguage">
+	    		<!--copyright start-->
+			    <div class="copyright">
+			        <p class="tag-line">
+			            Copyright &copy; 2017<script>
+			            	new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());
+			            </script> 
+			            <span>蒋中梅&nbsp;版权所有</span>
+			        </p>
+			    </div>
+			</div>
+		</footer>
+	</body>
+</html>
